@@ -1,4 +1,4 @@
-﻿namespace Assessment2
+﻿namespace Assessment3
 {
     partial class AddCustomerForm
     {

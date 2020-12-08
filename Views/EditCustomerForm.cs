@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Assessment2
+namespace Assessment3
 {
-    public partial class EditCustomerForm : Assessment2.CUDCustomerParentForm
+    public partial class EditCustomerForm : Assessment3.CUDCustomerParentForm
     {
         public EditCustomerForm(Customer customer)
         {

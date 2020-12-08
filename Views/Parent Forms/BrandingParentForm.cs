@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Assessment2
+namespace Assessment3
 {
     public partial class BrandingParentForm : Form
     {

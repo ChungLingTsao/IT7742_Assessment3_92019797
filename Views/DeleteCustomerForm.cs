@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Assessment2
+namespace Assessment3
 {
-    public partial class DeleteCustomerForm : Assessment2.CUDCustomerParentForm
+    public partial class DeleteCustomerForm : Assessment3.CUDCustomerParentForm
     {
         public DeleteCustomerForm(Customer customer)
         {

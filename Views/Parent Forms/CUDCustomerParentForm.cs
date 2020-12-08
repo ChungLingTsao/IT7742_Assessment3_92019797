@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assessment2
+namespace Assessment3
 {
     public partial class CUDCustomerParentForm : BrandingParentForm
     {
@@ -13,12 +13,12 @@ namespace Assessment2
         {
             if (staffCheckBox.Checked)
             {
-                staffCheckBox.BackgroundImage = Assessment2.Properties.Resources.toggleon1; 
+                staffCheckBox.BackgroundImage = Assessment3.Properties.Resources.toggleon1; 
                 staffCheckBox.Padding = new System.Windows.Forms.Padding(2, 2, 30, 2);
                 staffCheckBox.Text = "YES"; }
             else
             {
-                staffCheckBox.BackgroundImage = Assessment2.Properties.Resources.toggleoff1;
+                staffCheckBox.BackgroundImage = Assessment3.Properties.Resources.toggleoff1;
                 staffCheckBox.Padding = new System.Windows.Forms.Padding(2, 2, 10, 2);
                 staffCheckBox.Text = "NO";
             }

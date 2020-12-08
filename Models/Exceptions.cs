@@ -5,7 +5,7 @@
 */
 using System;
 
-namespace Assessment2
+namespace Assessment3
 {
     [Serializable]
     public class FailedWithdrawlException : Exception

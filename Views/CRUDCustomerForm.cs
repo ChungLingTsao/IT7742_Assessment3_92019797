@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Assessment2
+namespace Assessment3
 {
     public partial class CRUDCustomerForm : BrandingParentForm
     {
