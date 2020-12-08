@@ -85,6 +85,30 @@
     <Compile Include="Models\Account Models\Omni.cs" />
     <Compile Include="Models\Account Models\Investment.cs" />
     <Compile Include="Models\Account Models\Everyday.cs" />
+    <Compile Include="Views\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddAccountForm.Designer.cs">
+      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageAccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageAccountsForm.Designer.cs">
+      <DependentUpon>ManageAccountsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Parent Forms\CUDCustomerParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +122,12 @@
     <Compile Include="Views\Parent Forms\BrandingParentForm.Designer.cs">
       <DependentUpon>BrandingParentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Parent Forms\PopupParentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Parent Forms\PopupParentForm.Designer.cs">
+      <DependentUpon>PopupParentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +139,12 @@
     <Compile Include="Views\TablessControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Views\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddAccountForm.resx">
+      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,11 +160,17 @@
     <EmbeddedResource Include="Views\EditCustomerForm.resx">
       <DependentUpon>EditCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageAccountsForm.resx">
+      <DependentUpon>ManageAccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Parent Forms\BrandingParentForm.resx">
       <DependentUpon>BrandingParentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Parent Forms\CUDCustomerParentForm.resx">
       <DependentUpon>CUDCustomerParentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Parent Forms\PopupParentForm.resx">
+      <DependentUpon>PopupParentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
@@ -143,6 +185,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

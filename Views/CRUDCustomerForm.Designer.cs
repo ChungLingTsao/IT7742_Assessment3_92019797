@@ -35,6 +35,7 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.instructionLabel = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
+            this.manageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -47,9 +48,9 @@
             this.addButton.FlatAppearance.BorderSize = 3;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.addButton.Location = new System.Drawing.Point(891, 255);
+            this.addButton.Location = new System.Drawing.Point(891, 209);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(270, 100);
+            this.addButton.Size = new System.Drawing.Size(270, 90);
             this.addButton.TabIndex = 5;
             this.addButton.Text = "Add Customer";
             this.addButton.UseVisualStyleBackColor = true;
@@ -61,9 +62,9 @@
             this.editButton.FlatAppearance.BorderSize = 3;
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.editButton.Location = new System.Drawing.Point(891, 386);
+            this.editButton.Location = new System.Drawing.Point(891, 316);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(270, 100);
+            this.editButton.Size = new System.Drawing.Size(270, 90);
             this.editButton.TabIndex = 6;
             this.editButton.Text = "Edit Selected Customer";
             this.editButton.UseVisualStyleBackColor = true;
@@ -75,9 +76,9 @@
             this.deleteButton.FlatAppearance.BorderSize = 3;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.deleteButton.Location = new System.Drawing.Point(891, 519);
+            this.deleteButton.Location = new System.Drawing.Point(891, 423);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(270, 100);
+            this.deleteButton.Size = new System.Drawing.Size(270, 90);
             this.deleteButton.TabIndex = 7;
             this.deleteButton.Text = "Delete Selected Customer";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -126,9 +127,24 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // manageButton
+            // 
+            this.manageButton.Enabled = false;
+            this.manageButton.FlatAppearance.BorderSize = 3;
+            this.manageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.manageButton.Location = new System.Drawing.Point(891, 529);
+            this.manageButton.Name = "manageButton";
+            this.manageButton.Size = new System.Drawing.Size(270, 90);
+            this.manageButton.TabIndex = 22;
+            this.manageButton.Text = "Manage Selected Customer Accounts";
+            this.manageButton.UseVisualStyleBackColor = true;
+            this.manageButton.Click += new System.EventHandler(this.manageButton_Click);
+            // 
             // CRUDCustomerForm
             // 
             this.ClientSize = new System.Drawing.Size(1260, 677);
+            this.Controls.Add(this.manageButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.instructionLabel);
             this.Controls.Add(this.searchTextBox);
@@ -146,6 +162,7 @@
             this.Controls.SetChildIndex(this.instructionLabel, 0);
             this.Controls.SetChildIndex(this.clearButton, 0);
             this.Controls.SetChildIndex(this.titleLabel, 0);
+            this.Controls.SetChildIndex(this.manageButton, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +177,6 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label instructionLabel;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button manageButton;
     }
 }

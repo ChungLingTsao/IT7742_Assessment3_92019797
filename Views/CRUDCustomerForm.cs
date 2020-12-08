@@ -74,12 +74,23 @@ namespace Assessment3
         {
             editButton.Enabled = true;
             deleteButton.Enabled = true;
+            manageButton.Enabled = true;
 
             if (customerListBox.SelectedIndex == -1)
             {
                 editButton.Enabled = false;
                 deleteButton.Enabled = false;
+                manageButton.Enabled = false;
             }
+        }
+
+        private void manageButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Customer c = customerListBox.SelectedItem as Customer;
+
+            ManageAccountsForm ManAccForm = new ManageAccountsForm(c);
+            ManAccForm.ShowDialog();
         }
     }
 }
