@@ -6,10 +6,13 @@
  *              open a bank account. This class would also hold a list of accounts open by 
  *              the customer in the form of an account ID list.
 */
+using Assessment3;
+using System;
 using System.Collections.Generic;
 
 namespace Assessment3
 {
+    [Serializable]
     public class Customer
     {
         private int _customerNumber;
@@ -22,7 +25,7 @@ namespace Assessment3
         private string _zip;
         private bool _isStaff; // Used to adjust failed transaction fees
 
-        private List<int> _accountList; // A customer should be able to have any number of accounts.
+        private List<Account> _accountList; // A customer should be able to have any number of accounts.
 
         public int CustomerNumber { get => _customerNumber; set => _customerNumber = value; }
         public string Name { get => _name; set => _name = value; }
@@ -33,6 +36,7 @@ namespace Assessment3
         public string City { get => _city; set => _city = value; }
         public string Zip { get => _zip; set => _zip = value; }
         public bool IsStaff { get => _isStaff; set => _isStaff = value; }
+        public List<Account> AccountList { get => _accountList; set => _accountList = value; }
 
         public Customer(int customerNumber, string name, string phone, string email, string address, string suburb, string city, string zip, bool isStaff)
         {
@@ -46,7 +50,7 @@ namespace Assessment3
             _zip = zip;
             _isStaff = isStaff;
 
-            _accountList = new List<int>();
+            _accountList = new List<Account>();
         }
 
         public override string ToString()

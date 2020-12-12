@@ -5,8 +5,6 @@ namespace Assessment3
 {
     public partial class CRUDCustomerForm : BrandingParentForm
     {
-        AddCustomerForm FormAddCust = new AddCustomerForm();
-
         public CRUDCustomerForm()
         {
             InitializeComponent();
@@ -17,7 +15,7 @@ namespace Assessment3
             customerListBox.Items.Clear();
 
             List<Customer> customerRepository = CustomerRepository.getInstance().GetAllCustomers();
-
+            
             foreach (Customer customer in customerRepository)
             {
                 if (customer.Name.Contains(selectedName))
@@ -48,7 +46,8 @@ namespace Assessment3
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-           
+
+            AddCustomerForm FormAddCust = new AddCustomerForm();
             FormAddCust.ShowDialog();
         }
 
@@ -87,9 +86,9 @@ namespace Assessment3
         private void manageButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Customer c = customerListBox.SelectedItem as Customer;
+            Customer customer = customerListBox.SelectedItem as Customer;
 
-            ManageAccountsForm ManAccForm = new ManageAccountsForm(c);
+            ManageAccountsForm ManAccForm = new ManageAccountsForm(customer);
             ManAccForm.ShowDialog();
         }
     }

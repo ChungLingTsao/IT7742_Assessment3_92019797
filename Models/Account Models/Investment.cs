@@ -4,9 +4,12 @@
  * Description: Child class of Account. 
  *              Has a variable interest rate, no overdraft, and a fail fee.
 */
-namespace Assessment3.Models
+using System;
+
+namespace Assessment3
 {
-    class Investment : Account
+    [Serializable]
+    public class Investment : Account
     {
         private double _interestRate;
         private double _failFee;

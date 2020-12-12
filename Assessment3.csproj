@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Customer Models\ContactDetails.cs" />
     <Compile Include="Models\Exceptions.cs" />
     <Compile Include="Models\Customer Models\CustomerRepository.cs" />
     <Compile Include="Controllers\CustomerController.cs" />

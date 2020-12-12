@@ -29,47 +29,50 @@ namespace Assessment3
         /// </summary>
         private void InitializeComponent()
         {
-            this.addinterestButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.everydayButton = new System.Windows.Forms.Button();
+            this.omniButton = new System.Windows.Forms.Button();
+            this.investmentButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // addinterestButton
+            // everydayButton
             // 
-            this.addinterestButton.FlatAppearance.BorderSize = 3;
-            this.addinterestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addinterestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.addinterestButton.Location = new System.Drawing.Point(45, 163);
-            this.addinterestButton.Name = "addinterestButton";
-            this.addinterestButton.Size = new System.Drawing.Size(210, 160);
-            this.addinterestButton.TabIndex = 33;
-            this.addinterestButton.Text = "Everyday";
-            this.addinterestButton.UseVisualStyleBackColor = true;
+            this.everydayButton.FlatAppearance.BorderSize = 3;
+            this.everydayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.everydayButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.everydayButton.Location = new System.Drawing.Point(45, 163);
+            this.everydayButton.Name = "everydayButton";
+            this.everydayButton.Size = new System.Drawing.Size(210, 160);
+            this.everydayButton.TabIndex = 33;
+            this.everydayButton.Text = "Everyday";
+            this.everydayButton.UseVisualStyleBackColor = true;
+            this.everydayButton.Click += new System.EventHandler(this.everydayButton_Click);
             // 
-            // button1
+            // omniButton
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.button1.Location = new System.Drawing.Point(546, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 160);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Omni";
-            this.button1.UseVisualStyleBackColor = true;
+            this.omniButton.FlatAppearance.BorderSize = 3;
+            this.omniButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.omniButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.omniButton.Location = new System.Drawing.Point(546, 163);
+            this.omniButton.Name = "omniButton";
+            this.omniButton.Size = new System.Drawing.Size(210, 160);
+            this.omniButton.TabIndex = 34;
+            this.omniButton.Text = "Omni";
+            this.omniButton.UseVisualStyleBackColor = true;
+            this.omniButton.Click += new System.EventHandler(this.omniButton_Click);
             // 
-            // button2
+            // investmentButton
             // 
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.button2.Location = new System.Drawing.Point(294, 163);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(210, 160);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Investment";
-            this.button2.UseVisualStyleBackColor = true;
+            this.investmentButton.FlatAppearance.BorderSize = 3;
+            this.investmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.investmentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.investmentButton.Location = new System.Drawing.Point(294, 163);
+            this.investmentButton.Name = "investmentButton";
+            this.investmentButton.Size = new System.Drawing.Size(210, 160);
+            this.investmentButton.TabIndex = 35;
+            this.investmentButton.Text = "Investment";
+            this.investmentButton.UseVisualStyleBackColor = true;
+            this.investmentButton.Click += new System.EventHandler(this.investmentButton_Click);
             // 
             // label1
             // 
@@ -86,13 +89,13 @@ namespace Assessment3
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.addinterestButton);
+            this.Controls.Add(this.omniButton);
+            this.Controls.Add(this.investmentButton);
+            this.Controls.Add(this.everydayButton);
             this.Name = "AddAccountForm";
-            this.Controls.SetChildIndex(this.addinterestButton, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.everydayButton, 0);
+            this.Controls.SetChildIndex(this.investmentButton, 0);
+            this.Controls.SetChildIndex(this.omniButton, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.titleLabel, 0);
             this.ResumeLayout(false);
@@ -102,9 +105,9 @@ namespace Assessment3
 
         #endregion
 
-        private System.Windows.Forms.Button addinterestButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button everydayButton;
+        private System.Windows.Forms.Button omniButton;
+        private System.Windows.Forms.Button investmentButton;
         private System.Windows.Forms.Label label1;
     }
 }

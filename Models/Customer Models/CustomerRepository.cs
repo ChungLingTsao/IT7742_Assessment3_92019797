@@ -4,13 +4,19 @@
  * Description: A repository class for holding the data and providing access. 
  *              Normally, the application would be connected to a database.
 */
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Assessment3
 {
     class CustomerRepository
     {
         private static CustomerRepository _instance = null;
+        int _nextID = 1;
 
         List<Customer> customerRepo = new List<Customer>();
 
@@ -19,17 +25,20 @@ namespace Assessment3
             if (_instance == null)
             {
                 _instance = new CustomerRepository();
-                Customer customer1 = new Customer(1, "Charles Tsao", "02102557711", "ctsa181@mywhitecliffe.com", "123 Somewhere Street", "Burnside", "Christchurch", "8053", true);
-                Customer customer2 = new Customer(2, "Brady Phelps", "0823916128", "Maecenas.mi.felis@laoreetlectusquis.com", "Ap #972-6122 Sem Rd", "Maule", "Yerbas Buenas", "3809", false);
-                Customer customer3 = new Customer(3, "Xavier Stout", "0287944623", "mollis.Integer.tincidunt@arcuvelquam.net", "Ap #949-2417 Mauris Road", "BOL", "Magangue", "51405", false);
-                Customer customer4 = new Customer(4, "Daniel Thornton", "0769944547", "sapien.cursus.in@elitsed.edu", "894 - 9952 Curabitur Avenue", "ANT", "Itagüí", "6354", false);
-                Customer customer5 = new Customer(5, "Christopher Francis", "0499006135", "augue.eu.tellus@Donec.edu", "947 Sagittis Rd", "ANC", "Huaraz", "195334", true);
 
-                _instance.customerRepo.Add(customer1);
-                _instance.customerRepo.Add(customer2);
-                _instance.customerRepo.Add(customer3);
-                _instance.customerRepo.Add(customer4);
-                _instance.customerRepo.Add(customer5);
+                /* The following customer data has been transfered to the serialized binary file 'customers.bin' */
+
+                //Customer customer1 = new Customer(1, "Charles Tsao", "02102557711", "ctsa181@mywhitecliffe.com", "123 Somewhere Street", "Burnside", "Christchurch", "8053", true);
+                //Customer customer2 = new Customer(2, "Brady Phelps", "0823916128", "Maecenas.mi.felis@laoreetlectusquis.com", "Ap #972-6122 Sem Rd", "Maule", "Yerbas Buenas", "3809", false);
+                //Customer customer3 = new Customer(3, "Xavier Stout", "0287944623", "mollis.Integer.tincidunt@arcuvelquam.net", "Ap #949-2417 Mauris Road", "BOL", "Magangue", "51405", false);
+                //Customer customer4 = new Customer(4, "Daniel Thornton", "0769944547", "sapien.cursus.in@elitsed.edu", "894 - 9952 Curabitur Avenue", "ANT", "Itagüí", "6354", false);
+                //Customer customer5 = new Customer(5, "Christopher Francis", "0499006135", "augue.eu.tellus@Donec.edu", "947 Sagittis Rd", "ANC", "Huaraz", "195334", true);
+
+                //_instance.customerRepo.Add(customer1);
+                //_instance.customerRepo.Add(customer2);
+                //_instance.customerRepo.Add(customer3);
+                //_instance.customerRepo.Add(customer4);
+                //_instance.customerRepo.Add(customer5);
             }
             return _instance;
         }
@@ -43,6 +52,8 @@ namespace Assessment3
             else
             {
                 customerRepo.Add(newCustomer);
+                _nextID++;
+                WriteBinaryData();
             }
         }
 
@@ -66,16 +77,69 @@ namespace Assessment3
                 //    }
                 //}
             }
+            WriteBinaryData();
         }
 
         public void DeleteCustomer(int deleteCustomerID)
         {
             customerRepo.RemoveAll(Customer => Customer.CustomerNumber == deleteCustomerID);
+            WriteBinaryData();
         }
 
         public List<Customer> GetAllCustomers()
         {
+            ReadBinaryData();
             return this.customerRepo;
+        }
+
+        public void WriteBinaryData()
+        {
+            //create a formatting object
+            IFormatter formatter = new BinaryFormatter();
+
+            //Create a new IO stream to write to the file Objects.bin
+            Stream stream = new FileStream("customers.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+
+            //use the formatter to serialize the customerRepo and _nextID and send it to the filestream
+            formatter.Serialize(stream, customerRepo);
+            formatter.Serialize(stream, _nextID);
+
+            //close the file
+            stream.Close();
+        }
+
+        public void ReadBinaryData()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("customers.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            customerRepo = (List<Customer>)formatter.Deserialize(stream);
+            _nextID = (int)formatter.Deserialize(stream);
+ //           Console.WriteLine(_nextID);
+            stream.Close();
+        }
+
+        public int getNextID()
+        {
+            return _nextID;
+        }
+
+        public int findAvailableID()
+        {
+            List<int> customerNumberList = new List<int>();
+
+            //var sortedCustomerList = customerRepo.OrderBy(c => c.CustomerNumber).ToList();
+
+            // Iterator used to determine lowest customerID that is not used
+            foreach (Customer customer in customerRepo)
+            {
+                customerNumberList.Add(customer.CustomerNumber);
+            }
+
+            int firstAvailableID = Enumerable.Range(1, int.MaxValue)
+                    .Except(customerNumberList)
+                    .FirstOrDefault();
+            Console.WriteLine(customerNumberList.Count);
+            return firstAvailableID;
         }
     }
 }

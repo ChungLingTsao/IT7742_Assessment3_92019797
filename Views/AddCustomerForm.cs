@@ -11,6 +11,8 @@ namespace Assessment3
             InitializeComponent();
             this.titleLabel.Text = "ADD CUSTOMER";
             this.button3.Text = "Add Customer";
+            //this.idTextBox.Text = CustomerRepository.getInstance().getNextID().ToString();
+            this.idTextBox.Text = CustomerRepository.getInstance().findAvailableID().ToString();
         }
 
         private void button3_Click_1(object sender, EventArgs e)

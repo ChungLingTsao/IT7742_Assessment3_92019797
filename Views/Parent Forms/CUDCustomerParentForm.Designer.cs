@@ -266,6 +266,7 @@
             // idTextBox
             // 
             this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idTextBox.Enabled = false;
             this.idTextBox.Location = new System.Drawing.Point(219, 12);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(546, 31);

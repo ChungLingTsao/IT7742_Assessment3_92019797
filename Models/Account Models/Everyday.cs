@@ -4,8 +4,11 @@
  * Description: Child class of Account. 
  *              Has no interest rate, no overdraft, no fees.
 */
-namespace Assessment3.Models
+using System;
+
+namespace Assessment3
 {
+    [Serializable]
     public class Everyday : Account
     {
         // Constructor

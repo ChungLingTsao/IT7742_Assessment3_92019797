@@ -4,9 +4,12 @@
  * Description: Child class of Account. 
  *              Has a conditional interest rate, no overdraft, and a fail fee.
 */
-namespace Assessment3.Models
+using System;
+
+namespace Assessment3
 {
-    class Omni : Account
+    [Serializable]
+    public class Omni : Account
     {
         private double _interestRate;
         private double _failFee;

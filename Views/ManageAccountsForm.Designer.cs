@@ -29,23 +29,25 @@ namespace Assessment3
         /// </summary>
         private void InitializeComponent()
         {
-            this.instructionLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAccountsForm));
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.accountListBox = new System.Windows.Forms.ListBox();
             this.manageButton = new System.Windows.Forms.Button();
             this.addnewButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // instructionLabel
+            // welcomeLabel
             // 
-            this.instructionLabel.AutoSize = true;
-            this.instructionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructionLabel.Location = new System.Drawing.Point(115, 176);
-            this.instructionLabel.Name = "instructionLabel";
-            this.instructionLabel.Size = new System.Drawing.Size(366, 37);
-            this.instructionLabel.TabIndex = 21;
-            this.instructionLabel.Text = "Welcome, Placeholder!";
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(115, 184);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(366, 37);
+            this.welcomeLabel.TabIndex = 21;
+            this.welcomeLabel.Text = "Welcome, Placeholder!";
             // 
             // accountListBox
             // 
@@ -56,6 +58,7 @@ namespace Assessment3
             this.accountListBox.Name = "accountListBox";
             this.accountListBox.Size = new System.Drawing.Size(706, 340);
             this.accountListBox.TabIndex = 26;
+            this.accountListBox.SelectedIndexChanged += new System.EventHandler(this.accountListBox_SelectedIndexChanged);
             // 
             // manageButton
             // 
@@ -107,23 +110,38 @@ namespace Assessment3
             this.button1.Text = "Delete Selected Account";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // backButton
+            // 
+            this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Location = new System.Drawing.Point(32, 190);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(54, 42);
+            this.backButton.TabIndex = 29;
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // ManageAccountsForm
             // 
             this.ClientSize = new System.Drawing.Size(1260, 677);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.accountListBox);
             this.Controls.Add(this.manageButton);
             this.Controls.Add(this.addnewButton);
-            this.Controls.Add(this.instructionLabel);
+            this.Controls.Add(this.welcomeLabel);
             this.Name = "ManageAccountsForm";
             this.Controls.SetChildIndex(this.titleLabel, 0);
-            this.Controls.SetChildIndex(this.instructionLabel, 0);
+            this.Controls.SetChildIndex(this.welcomeLabel, 0);
             this.Controls.SetChildIndex(this.addnewButton, 0);
             this.Controls.SetChildIndex(this.manageButton, 0);
             this.Controls.SetChildIndex(this.accountListBox, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.backButton, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,11 +149,12 @@ namespace Assessment3
 
         #endregion
 
-        private System.Windows.Forms.Label instructionLabel;
+        private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.ListBox accountListBox;
         private System.Windows.Forms.Button manageButton;
         private System.Windows.Forms.Button addnewButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button backButton;
     }
 }

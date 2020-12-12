@@ -3,8 +3,13 @@
  * Author: Chung-Ling Tsao (92019797)
  * Description: Abstract class that is used to implement the other account subtypes
 */
-namespace Assessment3.Models
+using System;
+//using System.Runtime.Serialization.Formatters.Binary;
+//using System.Runtime.Serialization;
+
+namespace Assessment3
 {
+    [Serializable]
     public abstract class Account
     {
         private int _accountID;
@@ -67,6 +72,5 @@ namespace Assessment3.Models
             Investment,
             Omni
         }
-
     }
 }
