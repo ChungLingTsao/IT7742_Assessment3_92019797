@@ -23,6 +23,7 @@ namespace Assessment3
             this.idTextBox.Enabled = false;
         }
 
+        // Allows user to edit a customer
         private void button3_Click(object sender, EventArgs e)
         {
             // Some very light client-side validation
@@ -38,17 +39,19 @@ namespace Assessment3
                 this.zipTextBox.Text != ""
                 )
             {
-                control.EditCustomer(
-                (int)long.Parse(this.idTextBox.Text),
-                this.nameTextBox.Text,
-                this.phoneTextBox.Text,
-                this.emailTextBox.Text,
-                this.addressTextBox.Text,
-                this.suburbTextBox.Text,
-                this.cityTextBox.Text,
-                this.zipTextBox.Text,
-                this.staffCheckBox.Checked
-                );
+                Customer editedCustomer = new Customer(
+                    (int)long.Parse(this.idTextBox.Text),
+                    this.nameTextBox.Text,
+                    this.phoneTextBox.Text,
+                    this.emailTextBox.Text,
+                    this.addressTextBox.Text,
+                    this.suburbTextBox.Text,
+                    this.cityTextBox.Text,
+                    this.zipTextBox.Text,
+                    this.staffCheckBox.Checked
+                    );
+
+                controller.EditCustomer(editedCustomer);
             
                 this.Hide();
                 this.Close();

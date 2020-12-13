@@ -4,7 +4,6 @@
  * Description: Implements the transactions for the banking system
 */
 using System;
-using System.Threading;
 using static Assessment3.Enums;
 
 namespace Assessment3
@@ -19,38 +18,15 @@ namespace Assessment3
         private double _amount;
         private double _remainingBalance;
 
-        //static int nextID;
-
         // Constructor
         public Transaction(int transactionID, bool transactionFail, double amount, Account account, ActionTypes action)
         {
-            //transactionID = Interlocked.Increment(ref nextID);
             _transactionID = transactionID;
             _isFailed = transactionFail;
             _amount = amount;
             _accountType = account;
             _actionType = action;
             _remainingBalance = account.getBalance();
-        }
-
-        public double GetAmount()
-        {
-            return _amount;
-        }
-
-        public void SetTransactionID(int transactionID)
-        {
-            _transactionID = transactionID;
-        }
-
-        public ActionTypes GetActionType()
-        {
-            return _actionType;
-        }
-
-        public double GetRemainingBalance()
-        {
-            return _remainingBalance;
         }
 
         //Overrides the ToString Method to display transaction info
@@ -80,7 +56,8 @@ namespace Assessment3
 
             else if (_actionType == ActionTypes.Transfer)
             {
-                return $"{_accountType.getAccountType()} Account ID: {_accountType.getAccountID()}; {_actionType} ${_amount:F}; Balance: ${_remainingBalance:F}";
+                double currentBalance = _remainingBalance - _amount;
+                return $"{_accountType.getAccountType()} Account ID: {_accountType.getAccountID()}; {_actionType} ${_amount:F}; Balance: ${currentBalance:F}";
             }
 
             else

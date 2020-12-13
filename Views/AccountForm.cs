@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static Assessment3.Enums;
 
@@ -11,82 +12,57 @@ namespace Assessment3
         Customer customer;
         List<Customer> customerRepository = CustomerRepository.getInstance().GetAllCustomers();
 
+        // Contructor for accepting everyday account parameter
         public AccountForm(Everyday everyday, Customer currentCustomer)
         {
             account = everyday;
             customer = currentCustomer;
             InitializeComponent();
             InitialiseFields();
-            this.accountTypeLabel.Text = account.getAccountType().ToString();
-            //this.accountIDLabel.Text = account.getAccountID().ToString();
-            //this.balanceLabel.Text = account.getBalance().ToString("c");
-            //this.interestLabel.Text = account.GetInterestRate().ToString("P");
         }
 
+        // Contructor for accepting investment account parameter
         public AccountForm(Investment investment, Customer currentCustomer)
         {
             account = investment;
             customer = currentCustomer;
             InitializeComponent();
             InitialiseFields();
-            this.accountTypeLabel.Text = investment.getAccountType().ToString();
-            this.accountIDLabel.Text = investment.getAccountID().ToString();
-            this.balanceLabel.Text = investment.getBalance().ToString("c");
-            this.interestLabel.Text = investment.GetInterestRate().ToString("P");
         }
 
+        // Contructor for accepting omni account parameter
         public AccountForm(Omni omni, Customer currentCustomer)
         {
             account = omni;
             customer = currentCustomer;
             InitializeComponent();
             InitialiseFields();
-            this.accountTypeLabel.Text = omni.getAccountType().ToString();
-            this.accountIDLabel.Text = omni.getAccountID().ToString();
-            this.balanceLabel.Text = omni.getBalance().ToString("c");
-            this.interestLabel.Text = omni.GetInterestRate().ToString("P");
         }
 
-        private void depositButton_Click(object sender, EventArgs e)
-        {
-            //AccountController accountController = new AccountController();
-            // accountController.Deposit(Convert.ToDouble(moneyInputTextBox.Text), customer , account);
-            double creditAmount = Convert.ToDouble(moneyInputTextBox.Text);
-
-            TransactionController transactionController = new TransactionController();
-            transactionController.Deposit(creditAmount, customer.CustomerNumber, account.getAccountID());
-
-            int nextId = account.TransactionsList.Count + 1;
-            Transaction transaction = new Transaction(nextId, false, creditAmount, account, ActionTypes.Deposit);
-            
-            transactionController.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
-
-            account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
-            //MessageBox.Show(account.getBalance().ToString());
-            InitialiseFields();
-        }
-
+        // Initialise all display fields necessary for the Form
         public void InitialiseFields()
         {
-            //MessageBox.Show(account.getBalance().ToString("c"));
-
             // Refresh the customer and account fields before redrawing form fields
             CustomerRepository.getInstance().ReadBinaryData();
             customer = CustomerRepository.getInstance().SelectCustomerFromCustomerList(customer.CustomerNumber);
             account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
 
+            // Displays account information
+            this.titleLabel.Text = "ACCOUNT DASHBOARD";
+            this.accountTypeLabel.Text = account.getAccountType().ToString();
             this.accountIDLabel.Text = account.getAccountID().ToString();
             this.balanceLabel.Text = account.getBalance().ToString("c");
             this.interestLabel.Text = account.GetInterestRate().ToString("P");
 
+            // Refreshes the transaction listbox
             this.transactionListBox.Items.Clear();
             foreach (Transaction transaction in account.TransactionsList)
             {
-                //transactionListBox.Items.Add(transaction.GetAmount().ToString("c") + " " + transaction.GetActionType().ToString() + transaction.transactionID);
                 transactionListBox.Items.Add(transaction.ToString());
             }
         }
 
+        // Navigates back to the Account Management Form
         private void switchaccountButton_Click(object sender, EventArgs e)
         {
             ManageAccountsForm manageAccountForm = new ManageAccountsForm(customer);
@@ -95,30 +71,62 @@ namespace Assessment3
             this.Close();
         }
 
-        private void withdrawButton_Click(object sender, EventArgs e)
+        // Performs an account deposit
+        private void depositButton_Click(object sender, EventArgs e)
         {
-            //TransactionController transactionController = new TransactionController();
-            //transactionController.Withdraw(Convert.ToDouble(moneyInputTextBox.Text), customer.CustomerNumber, account.getAccountID());
+            // Validating that input field is positive currency
+            bool moneyValidate = validateMoneyInput();
 
-            //account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
-            //MessageBox.Show(account.getBalance().ToString());
-            //InitialiseFields();
+            if (moneyValidate == true)
+            {
+                // Retrieves amount and deposits to account
+                double creditAmount = Convert.ToDouble(moneyInputTextBox.Text);
+                controller.Deposit(creditAmount, customer.CustomerNumber, account.getAccountID());
 
-            double debitAmount = Convert.ToDouble(moneyInputTextBox.Text);
+                // Logs the deposit transaction to the transaction list
+                int nextId = account.TransactionsList.Count + 1;
+                Transaction transaction = new Transaction(nextId, false, creditAmount, account, ActionTypes.Deposit);
+                controller.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
 
-            TransactionController transactionController = new TransactionController();
-            transactionController.Withdraw(debitAmount, customer.CustomerNumber, account.getAccountID());
-           
-            int nextId = account.TransactionsList.Count + 1;
-            Transaction transaction = new Transaction(nextId, false, debitAmount, account, ActionTypes.Withdraw);
+                // Sets the new account as the current account being displayed on the Form 
+                account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
+                InitialiseFields();
+            }
 
-            transactionController.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
-
-            account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
-            
-            InitialiseFields();
+            else
+            {
+                MessageBox.Show("Please input a valid amount for money", "Warning!");
+            }
         }
 
+        // Performs an account withdrawl
+        private void withdrawButton_Click(object sender, EventArgs e)
+        {
+            // Validating that input field is positive currency
+            bool moneyValidate = validateMoneyInput();
+
+            if (moneyValidate == true)
+            {
+                // Retrieves amount and withdraws to account
+                double debitAmount = Convert.ToDouble(moneyInputTextBox.Text);
+                controller.Withdraw(debitAmount, customer.CustomerNumber, account.getAccountID());
+
+                // Logs the deposit transaction to the transaction list
+                int nextId = account.TransactionsList.Count + 1;
+                Transaction transaction = new Transaction(nextId, false, debitAmount, account, ActionTypes.Withdraw);
+                controller.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
+
+                // Sets the new account as the current account being displayed on the Form 
+                account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
+                InitialiseFields();
+            }
+            else
+            {
+                MessageBox.Show("Please input a valid amount for money", "Warning!");
+            }
+        }
+
+        // Calculates the amount of interest to be gained
         private void calculateinterestButton_Click(object sender, EventArgs e)
         {
             double rate = account.GetInterestRate();
@@ -132,36 +140,30 @@ namespace Assessment3
                 "Calculating interest");
         }
 
+        // Performs an account deposit of interest gained
         private void addinterestButton_Click(object sender, EventArgs e)
         {
+            // Calculates and deposits the amount of interest gained
             double interestRecieved = account.GetInterestRate() * account.getBalance();
+            controller.AddInterest(interestRecieved, customer.CustomerNumber, account.getAccountID());
 
-            TransactionController transactionController = new TransactionController();
-            transactionController.AddInterest(interestRecieved, customer.CustomerNumber, account.getAccountID());
-
-            //account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
-          //  MessageBox.Show(account.getBalance().ToString());
-           // InitialiseFields();
-
-            
-
+            // Logs the add interest transaction to the transaction list
             int nextId = account.TransactionsList.Count + 1;
             Transaction transaction = new Transaction(nextId, false, interestRecieved, account, ActionTypes.Add_Interest);
+            controller.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
 
-            transactionController.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
-
+            // Sets the new account as the current account being displayed on the Form 
             account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
-            //MessageBox.Show(account.getBalance().ToString());
             InitialiseFields();
-
-            //Transaction transaction = new Transaction(false, interestRecieved, account, ActionTypes.Add_Interest);
         }
 
+        // Shows the account information regarding rates, fees, limits
         private void accountinfoButton_Click(object sender, EventArgs e)
         {
             double requiredBalance = account.GetRequiredBalance();
             string requiredBalanceInfo;
 
+            // Displays extra line only for omni account info
             if (requiredBalance > 0)
             {
                 requiredBalanceInfo = ("Required Balance for gaining interest: $" + requiredBalance.ToString("F"));
@@ -179,12 +181,20 @@ namespace Assessment3
             "Account Information");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //Opens up the transfer money dialog
+        private void transferButton_Click(object sender, EventArgs e)
         {
-            //this.Hide();
             TransferForm transferForm = new TransferForm(account, customer);
             transferForm.ShowDialog();
-            //this.Close();
+        }
+
+        // Validates that the input is a positive number in a standard currency format
+        public bool validateMoneyInput()
+        {
+            // Regex for validating currency
+            Regex regex = new Regex("^\\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(.[0-9][0-9])?$");
+            bool hasOnlyNumbers = regex.IsMatch(moneyInputTextBox.Text);
+            return hasOnlyNumbers;
         }
     }
 }

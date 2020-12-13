@@ -4,7 +4,7 @@ namespace Assessment3
 {
     public partial class BrandingParentForm : Form
     {
-        public static CustomerController control = new CustomerController();
+        public static Controller controller = new Controller();
 
         public BrandingParentForm()
         {

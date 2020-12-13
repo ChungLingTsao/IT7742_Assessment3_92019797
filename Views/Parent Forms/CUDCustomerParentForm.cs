@@ -9,6 +9,7 @@ namespace Assessment3
             InitializeComponent();
         }
 
+        // Changes the checkbox element for the staff checkbox if clicked
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
             if (staffCheckBox.Checked)
@@ -24,7 +25,7 @@ namespace Assessment3
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void backButton_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             this.Close();

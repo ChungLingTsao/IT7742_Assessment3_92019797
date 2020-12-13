@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* 
+ * Enums.cs
+ * Author: Chung-Ling Tsao (92019797)
+ * Description: Custome enumerators used for accounts and transactions
+*/
 
 namespace Assessment3
 {
@@ -14,7 +14,6 @@ namespace Assessment3
             Investment,
             Omni
         }
-
         public enum ActionTypes
         {
             Deposit,

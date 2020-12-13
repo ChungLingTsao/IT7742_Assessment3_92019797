@@ -5,6 +5,7 @@
  *              Has no interest rate, no overdraft, no fees.
 */
 using System;
+using static Assessment3.Enums;
 
 namespace Assessment3
 {
@@ -16,6 +17,9 @@ namespace Assessment3
         {
         }
 
+         /****************************************************
+         * Overridden methods of the abstract Account methods*
+         *****************************************************/
         public override double GetInterestRate()
         {
             return 0; // No interest. Also used to display the no interest info.

@@ -5,8 +5,7 @@
 */
 using System;
 using System.Collections.Generic;
-//using System.Runtime.Serialization.Formatters.Binary;
-//using System.Runtime.Serialization;
+using static Assessment3.Enums;
 
 namespace Assessment3
 {
@@ -21,8 +20,9 @@ namespace Assessment3
         public abstract double GetFailFee();
         public abstract double GetRequiredBalance();
 
-        private List<Transaction> _transactionsList; // A customer should be able to have any number of accounts.
+        private List<Transaction> _transactionsList; // Each account has a list of transactions
 
+        //Account Constructor
         public Account(int accountID, double balance, AccountTypes type)
         {
             _accountID = accountID;
@@ -32,53 +32,57 @@ namespace Assessment3
             _transactionsList = new List<Transaction>();
         }
 
+        /*****************************
+         *  GETTERS/SETTER Functions *
+         *****************************/
         public int getAccountID()
         {
             return _accountID;
         }
 
-        public double getBalance()
+        public double getBalance() 
         {
             return _balance;
         }
 
-        public void Deposit(double credit)
+        public void setBalance(double balance)
         {
-            _balance += credit;
+            _balance = balance;
         }
-
-        public void Withdraw(double debit)
-        {
-            //_balance -= debit;
-
-            // The following is functionality that has been added due to tests initialally failing
-            if (debit <= 0)
-            {
-                throw new FailedWithdrawlException();
-            }
-            else if (debit < _balance)
-            {
-                double newBalance = _balance - debit;
-                _balance = newBalance;
-            }
-            else
-            {
-                throw new FailedWithdrawlException();
-            }
-        }
-
-        public List<Transaction> TransactionsList { get => _transactionsList; set => _transactionsList = value; }
 
         public AccountTypes getAccountType()
         {
             return _accountType;
         }
 
-        public enum AccountTypes
+        public List<Transaction> TransactionsList { get => _transactionsList; set => _transactionsList = value; }
+
+        //Function for depositing an amount of money into the account
+        public void Deposit(double credit)
         {
-            Everyday,
-            Investment,
-            Omni
+            _balance += credit;
+        }
+
+        //Function for widthrawing an amount of money from the account
+        public void Withdraw(double debit)
+        {
+            //_balance -= debit;
+            double overdraftLimit = this.GetOverdraftLimit();
+
+            // The following is functionality that has been added due to tests initially failing
+            if (debit <= 0)
+            {
+                throw new FailedWithdrawlException(debit);
+            }
+            else if (debit < (_balance + overdraftLimit))
+            {
+                double newBalance = _balance - debit;
+                _balance = newBalance;
+            }
+            else
+            {
+                throw new FailedWithdrawlException(debit);
+            }
         }
     }
 }

@@ -15,37 +15,27 @@ namespace Assessment3
 {
     class CustomerRepository
     {
-        private static CustomerRepository _instance = null;
         int _nextID = 1;
-
         List<Customer> customerRepo = new List<Customer>();
+
+        /**********************************************************************
+        * Basic singleton pattern used to ensure only one instance is created *
+        **********************************************************************/
+        private static CustomerRepository _instance = null;
 
         public static CustomerRepository getInstance()
         {
             if (_instance == null)
             {
                 _instance = new CustomerRepository();
-
-                /* The following customer data has been transfered to the serialized binary file 'customers.bin' */
-
-                //Customer customer1 = new Customer(1, "Charles Tsao", "02102557711", "ctsa181@mywhitecliffe.com", "123 Somewhere Street", "Burnside", "Christchurch", "8053", true);
-                //Customer customer2 = new Customer(2, "Brady Phelps", "0823916128", "Maecenas.mi.felis@laoreetlectusquis.com", "Ap #972-6122 Sem Rd", "Maule", "Yerbas Buenas", "3809", false);
-                //Customer customer3 = new Customer(3, "Xavier Stout", "0287944623", "mollis.Integer.tincidunt@arcuvelquam.net", "Ap #949-2417 Mauris Road", "BOL", "Magangue", "51405", false);
-                //Customer customer4 = new Customer(4, "Daniel Thornton", "0769944547", "sapien.cursus.in@elitsed.edu", "894 - 9952 Curabitur Avenue", "ANT", "Itagüí", "6354", false);
-                //Customer customer5 = new Customer(5, "Christopher Francis", "0499006135", "augue.eu.tellus@Donec.edu", "947 Sagittis Rd", "ANC", "Huaraz", "195334", true);
-
-                //_instance.customerRepo.Add(customer1);
-                //_instance.customerRepo.Add(customer2);
-                //_instance.customerRepo.Add(customer3);
-                //_instance.customerRepo.Add(customer4);
-                //_instance.customerRepo.Add(customer5);
             }
             return _instance;
         }
 
+        // Adds new customer to the repository
         public void AddNewCustomer(Customer newCustomer)
         {
-            if (newCustomer.Name == "")
+            if (newCustomer.Name == "") // Customer must have a name
             {
                 throw new InvalidCustomerException();
             }
@@ -53,151 +43,136 @@ namespace Assessment3
             {
                 customerRepo.Add(newCustomer);
                 _nextID++;
-                WriteBinaryData();
+                WriteBinaryData(); // Saves the edited customer repository
             }
         }
 
+        // Edits new customer to the repository
         public void EditCustomer(Customer editedCustomer, int previousID)
         {
-            if (editedCustomer.Name == "")
+            if (editedCustomer.Name == "") // Customer must have a name
             {
                 throw new InvalidCustomerException();
             }
             else
             {
+                // The old instance of the customer is removed from the repository and replaced
+                // with the new instance of the customer.
                 customerRepo.RemoveAll(Customer => Customer.CustomerNumber == previousID);
-
                 customerRepo.Add(editedCustomer);
-                
-                //foreach (Customer uneditedcustomer in customerRepo)
-                //{
-                //    if (uneditedcustomer.CustomerNumber == editedCustomer.CustomerNumber)
-                //    {
-                //        customerRepo.Remove(uneditedcustomer);
-                //    }
-                //}
             }
-            WriteBinaryData();
+            WriteBinaryData();  // Saves the edited customer repository
         }
 
+        // Deletes a customer from the repository based on customer number
         public void DeleteCustomer(int deleteCustomerID)
         {
             customerRepo.RemoveAll(Customer => Customer.CustomerNumber == deleteCustomerID);
-            WriteBinaryData();
+            WriteBinaryData(); // Saves the edited customer repository
         }
 
-        public void EditAccount(Customer editedCustomer, int previousID)
+        // Removes older account from the customer's account list and replaces with the new account
+        public void EditAccount(Customer customer, Account selectedAccount)
         {
-            if (editedCustomer.Name == "")
-            {
-                throw new InvalidCustomerException();
-            }
-            else
-            {
-                customerRepo.RemoveAll(Customer => Customer.CustomerNumber == previousID);
-
-                customerRepo.Add(editedCustomer);
-
-                //foreach (Customer uneditedcustomer in customerRepo)
-                //{
-                //    if (uneditedcustomer.CustomerNumber == editedCustomer.CustomerNumber)
-                //    {
-                //        customerRepo.Remove(uneditedcustomer);
-                //    }
-                //}
-            }
-            WriteBinaryData();
+            customer.AccountList.RemoveAll(Account => Account.getAccountID() == selectedAccount.getAccountID());
+            customer.AccountList.Add(selectedAccount);
         }
 
+        // Getter function to return all customers
         public List<Customer> GetAllCustomers()
         {
-            ReadBinaryData();
+            ReadBinaryData(); // Reads the customer repository
             return this.customerRepo;
         }
 
-        public List<Account> GetAccountListByCustomerId(int customerID)
+        // Deposits money to a specific customer account
+        public void DepositToCustomerAccount(double deposit, int customerID, int accountID)
         {
-            ReadBinaryData();
-            Customer c = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
-
-            return c.AccountList;
-        }
-
-        public void DepositTransactionToCustomerAccount(double deposit, int customerID, int accountID)
-        {
+            // Selects the relevant customer and account
             Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
-            //Customer c = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
             Account selectedAccount = SelectAccountFromAccountList(selectedCustomer, accountID);
-            //Account a = (from account in c.AccountList where account.getAccountID() == accountID select account).First();
 
+            // Deposits money into account
             selectedAccount.Deposit(deposit);
 
-            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == accountID);
-            selectedCustomer.AccountList.Add(selectedAccount);
+            // Replaces old account in customer account list with new account
+            EditAccount(selectedCustomer, selectedAccount);
 
+            // Removes older instance of the customer in the customer repo and replaces with the new account
             EditCustomer(selectedCustomer, customerID);
         }
 
+        // Withdraws money from a specific customer account
         public void WithdrawTransactionFromCustomerAccount(double debit, int customerID, int accountID)
         {
+            // Selects the relevant customer and account
             Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
             Account selectedAccount = SelectAccountFromAccountList(selectedCustomer, accountID);
 
+            // Withdraws money from account
             selectedAccount.Withdraw(debit);
+            
+            // Replaces old account in customer account list with new account
+            EditAccount(selectedCustomer, selectedAccount);
 
-            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == accountID);
-            selectedCustomer.AccountList.Add(selectedAccount);
-
+            // Removes older instance of the customer in the customer repo and replaces with the new account
             EditCustomer(selectedCustomer, customerID);
         }
 
+        // Logs a transaction to the transaction list of an account
         public void RecordTransactionToTransactionList(Transaction transaction, int customerID, int accountID)
         {
+            // Selects the relevant customer and account
             Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
             Account selectedAccount = SelectAccountFromAccountList(selectedCustomer, accountID);
 
+            // Withdraws money from account
             selectedAccount.TransactionsList.Add(transaction);
 
-            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == accountID);
-            selectedCustomer.AccountList.Add(selectedAccount);
+            // Replaces old account in customer account list with new account
+            EditAccount(selectedCustomer, selectedAccount);
 
+            // Removes older instance of the customer in the customer repo and replaces with the new account
             EditCustomer(selectedCustomer, customerID);
         }
         
-
+        //Function to return specific customer from the customer repository
         public Customer SelectCustomerFromCustomerList(int customerID)
         {
-            ReadBinaryData();
+            ReadBinaryData(); // Get latest customer repository
             Customer selectedCustomer = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
-
             return selectedCustomer;
         }
 
+        //Function to select a specific account from a customers account list
         public Account SelectAccountFromAccountList(Customer customer, int accountID)
         {
-            ReadBinaryData();
+            ReadBinaryData(); // Get latest customer repository
             Account selectedAccount = (from account in customer.AccountList where account.getAccountID() == accountID select account).First();
             return selectedAccount;
         }
 
+        // Function that allows a customer to transfer money between their own accounts
         public void TransferAmountFromAccountToAccount2(double transferAmount, int customerID, int fromAccountID, int toAccountID) 
         {
+            // Selects the relevant customer and accounts
             Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
-            
             Account fromAccount = SelectAccountFromAccountList(selectedCustomer, fromAccountID);
             Account toAccount = SelectAccountFromAccountList(selectedCustomer, toAccountID);
 
+            // Transfer of money between accounts
             fromAccount.Withdraw(transferAmount);
             toAccount.Deposit(transferAmount);
 
-            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == fromAccountID);
-            selectedCustomer.AccountList.Add(fromAccount);
-            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == toAccountID);
-            selectedCustomer.AccountList.Add(toAccount);
+            // Replaces old accounts in customer account list with new accounts
+            EditAccount(selectedCustomer, fromAccount);
+            EditAccount(selectedCustomer, toAccount);
 
+            // Removes older instance of the customer in the customer repo and replaces with the new account
             EditCustomer(selectedCustomer, customerID);
         }
 
+        // Adds a new account to a customer and saves to customer repo
         public void AddNewAccount(Customer customer, Account account)
         {
             Customer selectedCustomer = SelectCustomerFromCustomerList(customer.CustomerNumber);
@@ -205,12 +180,13 @@ namespace Assessment3
             EditCustomer(selectedCustomer, customer.CustomerNumber);
         }
 
+        // Writes the customer repository and nextId to a binary file
         public void WriteBinaryData()
         {
             //create a formatting object
             IFormatter formatter = new BinaryFormatter();
 
-            //Create a new IO stream to write to the file Objects.bin
+            //Create a new IO stream to write to the file customers.bin
             Stream stream = new FileStream("customers.bin", FileMode.Create, FileAccess.Write, FileShare.None);
 
             //use the formatter to serialize the customerRepo and _nextID and send it to the filestream
@@ -221,37 +197,39 @@ namespace Assessment3
             stream.Close();
         }
 
+        // Reads the customer repository and nextId from a binary file
         public void ReadBinaryData()
         {
+            //create a formatting object
             IFormatter formatter = new BinaryFormatter();
+            
+            //Create a new IO stream to read to the file customers.bin
             Stream stream = new FileStream("customers.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+
+            //use the formatter to deserialize the customerRepo and _nextID 
             customerRepo = (List<Customer>)formatter.Deserialize(stream);
             _nextID = (int)formatter.Deserialize(stream);
- //           Console.WriteLine(_nextID);
+
+            //close the file
             stream.Close();
         }
 
-        public int getNextID()
-        {
-            return _nextID;
-        }
-
+        // Function to find the next available customerID. Incrementing from 0.
         public int findAvailableID()
         {
             List<int> customerNumberList = new List<int>();
 
-            //var sortedCustomerList = customerRepo.OrderBy(c => c.CustomerNumber).ToList();
-
-            // Iterator used to determine lowest customerID that is not used
+            // Iterator used to store the customer IDs into a list
             foreach (Customer customer in customerRepo)
             {
                 customerNumberList.Add(customer.CustomerNumber);
             }
 
+            // Determines lowest customerID that is not used  
             int firstAvailableID = Enumerable.Range(1, int.MaxValue)
                     .Except(customerNumberList)
                     .FirstOrDefault();
-            Console.WriteLine(customerNumberList.Count);
+
             return firstAvailableID;
         }
     }

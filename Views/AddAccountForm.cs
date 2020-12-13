@@ -17,8 +17,10 @@ namespace Assessment3
         {
             InitializeComponent();
             currentCustomer = c;
+            this.titleLabel.Text = "ADD NEW ACCOUNT";
         }
 
+        // User is able to add an everyday account to the customer
         private void everydayButton_Click(object sender, System.EventArgs e)
         {
             int accountCount = currentCustomer.AccountList.Count;
@@ -27,19 +29,14 @@ namespace Assessment3
             DialogResult result = MessageBox.Show("Are you sure you want to create a new everyday account?", "Create Account", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                AccountController accountController = new AccountController();
-                accountController.AddAccount(currentCustomer, newEveryday);
-
-                //currentCustomer.AccountList.Add(newEveryday);
+                controller.AddAccount(currentCustomer, newEveryday);
                 MessageBox.Show("Everyday account successfully created");
-
-                //CustomerRepository customerRepo = new CustomerRepository();
-                //customerRepo.EditCustomer(currentCustomer, currentCustomer.CustomerNumber);
 
                 this.Close(); // Close form and return to ManageAccountForm
             }
         }
 
+        // User is able to add an investment account to the customer
         private void investmentButton_Click(object sender, System.EventArgs e)
         {
             int accountCount = currentCustomer.AccountList.Count;
@@ -48,26 +45,14 @@ namespace Assessment3
             DialogResult result = MessageBox.Show("Are you sure you want to create a new investment account?", "Create Account", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                AccountController accountController = new AccountController();
-                accountController.AddAccount(currentCustomer, newInvestment);
-
+                controller.AddAccount(currentCustomer, newInvestment);
                 MessageBox.Show("Investment account successfully created");
 
                 this.Close(); // Close form and return to ManageAccountForm
-                              //DialogResult result = MessageBox.Show("Are you sure you want to create a new investment account?", "Create Account", MessageBoxButtons.OKCancel);
-                              //if (result == DialogResult.OK)
-                              //{
-                              //    int accountCount = currentCustomer.AccountList.Count;
-                              //    currentCustomer.AccountList.Add(new Investment(accountCount + 1, startBalance, interestRate, failFee));
-                              //    MessageBox.Show("Investment account successfully created");
-                              //    this.Close(); // Close form and return to ManageAccountForm
-
-                //    CustomerRepository customerRepo = new CustomerRepository();
-                //    customerRepo.EditCustomer(currentCustomer, currentCustomer.CustomerNumber);
-                //}
             }
         }
 
+        // User is able to add an omni account to the customer
         private void omniButton_Click(object sender, System.EventArgs e)
         {
             int accountCount = currentCustomer.AccountList.Count;
@@ -76,26 +61,14 @@ namespace Assessment3
             DialogResult result = MessageBox.Show("Are you sure you want to create a new omni account?", "Create Account", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
-                AccountController accountController = new AccountController();
-                accountController.AddAccount(currentCustomer, newOmni);
-
+                controller.AddAccount(currentCustomer, newOmni);
                 MessageBox.Show("Omni account successfully created");
 
-                this.Close();
-                //DialogResult result = MessageBox.Show("Are you sure you want to create a new omni account?", "Create Account", MessageBoxButtons.OKCancel);
-                //if (result == DialogResult.OK)
-                //{
-                //    int accountCount = currentCustomer.AccountList.Count;
-                //    currentCustomer.AccountList.Add(new Omni(accountCount + 1, startBalance, interestRate, failFee, omniRequiredBalance, omniOverdraftLimit));
-                //    MessageBox.Show("Omni account successfully created");
-                //    this.Close(); // Close form and return to ManageAccountForm
-
-                //    CustomerRepository customerRepo = new CustomerRepository();
-                //    customerRepo.EditCustomer(currentCustomer, currentCustomer.CustomerNumber);
-                //}
+                this.Close(); // Close form and return to ManageAccountForm
             }
         }
 
+        // Close the current dialog form
         private void cancelButton_Click(object sender, System.EventArgs e)
         {
             this.Close();

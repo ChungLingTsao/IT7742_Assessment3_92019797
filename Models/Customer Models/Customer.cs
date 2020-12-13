@@ -6,7 +6,6 @@
  *              open a bank account. This class would also hold a list of accounts open by 
  *              the customer in the form of an account ID list.
 */
-using Assessment3;
 using System;
 using System.Collections.Generic;
 
@@ -27,6 +26,10 @@ namespace Assessment3
 
         private List<Account> _accountList; // A customer should be able to have any number of accounts.
 
+        /**************************
+        * GETTER/SETTER Functions *
+        **************************/
+
         public int CustomerNumber { get => _customerNumber; set => _customerNumber = value; }
         public string Name { get => _name; set => _name = value; }
         public string Phone { get => _phone; set => _phone = value; }
@@ -38,6 +41,7 @@ namespace Assessment3
         public bool IsStaff { get => _isStaff; set => _isStaff = value; }
         public List<Account> AccountList { get => _accountList; set => _accountList = value; }
 
+        //Constructor
         public Customer(int customerNumber, string name, string phone, string email, string address, string suburb, string city, string zip, bool isStaff)
         {
             _customerNumber = customerNumber;
@@ -53,22 +57,10 @@ namespace Assessment3
             _accountList = new List<Account>();
         }
 
+        //Overriden ToString Method. Used in previous assignment.
         public override string ToString()
         {
             return string.Format("Name: {0}, Customer Number: {1}, Is Staff: {2}", _name, _customerNumber, _isStaff.ToString());
         }
-
-        //public List<int> Accounts
-        //{
-        //    get { return _accountList; }
-        //    set { _accountList = value; }
-        //}
-
-        //public string GetName()
-        //{
-        //    return _name;
-        //}
-
-        // Implement getters and setters as necessary...
     }
 }

@@ -5,13 +5,15 @@
  *              Has a variable interest rate, no overdraft, and a fail fee.
 */
 using System;
+using static Assessment3.Enums;
 
 namespace Assessment3
 {
     [Serializable]
     public class Investment : Account
-    {
-        private double _interestRate;
+    {   
+        //Fields specific to investment account
+        private double _interestRate; 
         private double _failFee;
 
         // Constructor
@@ -20,6 +22,27 @@ namespace Assessment3
             _interestRate = interestRate;
             _failFee = failFee;
         }
+
+        // Applies fail fee if an invalid transaction has taken place
+        public void ApplyFailFee(bool isStaff)
+        {
+            double appliedFee;
+
+            if (isStaff == true)
+            {
+                appliedFee = _failFee / 2;
+            }
+            else
+            {
+                appliedFee = _failFee;
+            }
+            double remainingBalance = this.getBalance() - appliedFee;
+            setBalance(remainingBalance);
+        }
+
+        /****************************************************
+        * Overridden methods of the abstract Account methods*
+        *****************************************************/
 
         public override double GetInterestRate()
         {

@@ -13,16 +13,13 @@ namespace Assessment3
             InitializeComponent();
 
             this.welcomeLabel.Text = String.Format("Welcome, {0}!", c.Name);
+            this.titleLabel.Text = "MANAGE ACCOUNTS";
             currentCustomer = c;
 
             RefreshAccountList();
-            //foreach (Account account in currentCustomer.AccountList)
-            //{
-            //    accountListBox.Items.Add(account.getAccountType().ToString() );//+ " #" + account.getAccountID().ToString()) ;
-            //}
-            //customer initialisation
         }
 
+        // Navigate to the add account form
         private void addnewButton_Click(object sender, EventArgs e)
         {
             AddAccountForm addaccform = new AddAccountForm(currentCustomer);
@@ -32,23 +29,19 @@ namespace Assessment3
         //Opens AccountForm relative to what account has been selected in the accountListBox
         private void manageButton_Click(object sender, EventArgs e)
         {
-            //this.Hide();
             int f = accountListBox.SelectedIndex;
-            //MessageBox.Show(currentCustomer.AccountList[f].GetType().ToString());
 
             // Hack used to allow Selected Item to be cast as the correct account type
-           if (currentCustomer.AccountList[f].GetType() == typeof(Everyday)) 
+            if (currentCustomer.AccountList[f].GetType() == typeof(Everyday))
             {
                 Everyday everyday = (Everyday)currentCustomer.AccountList[f];
                 OpenAccountForm(everyday);
             }
-
             if (currentCustomer.AccountList[f].GetType() == typeof(Investment))
             {
                 Investment investment = (Investment)currentCustomer.AccountList[f];
                 OpenAccountForm(investment);
             }
-
             if (currentCustomer.AccountList[f].GetType() == typeof(Omni))
             {
                 Omni omni = (Omni)currentCustomer.AccountList[f];
@@ -66,15 +59,16 @@ namespace Assessment3
             this.Close();
         }
 
+        // Navigate back to Customer Management form
         private void backButton_Click(object sender, EventArgs e)
         {
-            
             CRUDCustomerForm Form1 = new CRUDCustomerForm();
             this.Hide();
             Form1.ShowDialog();
             this.Close();
         }
 
+        //Function to enable/disable the managebutton if an account has been selected
         private void accountListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             manageButton.Enabled = true;
@@ -85,22 +79,17 @@ namespace Assessment3
             }
         }
 
-        private void ReInitialize (object sender, EventArgs e)
-        {
-            ManageAccountsForm RefreshedForm = new ManageAccountsForm(currentCustomer);
-            this.Hide();
-            RefreshedForm.ShowDialog();
-            this.Close();
-        }
-
+        // Button to refresh the account list
         private void refreshButton_Click(object sender, EventArgs e)
         {
             RefreshAccountList();
         }
 
+        // Refreshes the list box with the current account list.
         public void RefreshAccountList()
         {
             accountListBox.Items.Clear();
+            manageButton.Enabled = false;
 
             currentCustomer = CustomerRepository.getInstance().SelectCustomerFromCustomerList(currentCustomer.CustomerNumber);
 

@@ -5,6 +5,7 @@
  *              Has a conditional interest rate, no overdraft, and a fail fee.
 */
 using System;
+using static Assessment3.Enums;
 
 namespace Assessment3
 {
@@ -16,6 +17,7 @@ namespace Assessment3
         private double _requiredBalance;
         private bool _sufficentBalance;
         private double _overdraftLimit;
+        
 
         //Constructor
         public Omni(int accountID, double balance, double interestRate, double failFee, double requiredBalance, double overdraftLimit) : base(accountID, balance, AccountTypes.Omni)
@@ -25,16 +27,43 @@ namespace Assessment3
             _requiredBalance = requiredBalance;
             _overdraftLimit = overdraftLimit;
 
-            // Determines if balance is high enough for account to earn interest
+            _sufficentBalance = CheckSufficentBalance(balance, requiredBalance);
+
+        }
+
+        // Determines if balance is high enough for the account to earn interest
+        public bool CheckSufficentBalance(double balance, double requiredBalance)
+        {
             if (balance >= requiredBalance)
             {
-                _sufficentBalance = true;
+                return true;
             }
             else
             {
-                _sufficentBalance = false;
+                return false;
             }
         }
+
+        // Applies fail fee if an invalid transaction has taken place
+        public void ApplyFailFee(bool isStaff)
+        {
+            double appliedFee;
+
+            if (isStaff == true)
+            {
+                appliedFee = _failFee / 2;
+            }
+            else
+            {
+                appliedFee = _failFee;
+            }
+            double remainingBalance = this.getBalance() - appliedFee;
+            setBalance(remainingBalance);
+        }
+
+        /****************************************************
+        * Overridden methods of the abstract Account methods*
+        *****************************************************/
 
         public override double GetInterestRate()
         {
@@ -56,14 +85,12 @@ namespace Assessment3
             return _requiredBalance;
         }
 
+        /*******************
+        * GETTER Functions *
+        *******************/
         public bool isSufficentBalance()
         {
             return _sufficentBalance;
-        }
-
-        public void setSufficentBalance(bool sufficient)
-        {
-            _sufficentBalance = sufficient;
         }
 
         public double getRequiredBalance()
