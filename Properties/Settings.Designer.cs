@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Assessment2.Properties
+namespace Assessment3.Properties
 {
 
 

@@ -1,4 +1,4 @@
-﻿namespace Assessment2
+﻿namespace Assessment3
 {
     partial class CUDCustomerParentForm
     {
@@ -266,6 +266,7 @@
             // idTextBox
             // 
             this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.idTextBox.Enabled = false;
             this.idTextBox.Location = new System.Drawing.Point(219, 12);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(546, 31);
@@ -300,7 +301,7 @@
             this.button1.Size = new System.Drawing.Size(54, 42);
             this.button1.TabIndex = 19;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.backButton_Click_1);
             // 
             // button3
             // 

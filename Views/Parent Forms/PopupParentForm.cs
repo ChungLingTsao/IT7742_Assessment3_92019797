@@ -2,11 +2,10 @@
 
 namespace Assessment3
 {
-    public partial class BrandingParentForm : Form
+    public partial class PopupParentForm : Form
     {
         public static Controller controller = new Controller();
-
-        public BrandingParentForm()
+        public PopupParentForm()
         {
             InitializeComponent();
         }

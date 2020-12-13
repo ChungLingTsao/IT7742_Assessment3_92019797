@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Assessment2
+namespace Assessment3
 {
-    public partial class DeleteCustomerForm : Assessment2.CUDCustomerParentForm
+    public partial class DeleteCustomerForm : Assessment3.CUDCustomerParentForm
     {
         public DeleteCustomerForm(Customer customer)
         {
@@ -31,12 +31,13 @@ namespace Assessment2
             this.staffCheckBox.Enabled = false;
         }
 
+        // Allows user to delete a customer
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to delete " + nameTextBox.Text + " from the system? ", "CAUTION", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                control.DeleteCustomer(Convert.ToInt32(this.idTextBox.Text));
+                controller.DeleteCustomer(Convert.ToInt32(this.idTextBox.Text));
 
                 this.Hide();
                 this.Close();

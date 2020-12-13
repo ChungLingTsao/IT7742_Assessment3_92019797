@@ -1,4 +1,4 @@
-﻿namespace Assessment2
+﻿namespace Assessment3
 {
     partial class AddCustomerForm
     {
@@ -34,7 +34,7 @@
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button3.Click += new System.EventHandler(this.addCustomerButton_Click_1);
             // 
             // textBox1
             // 

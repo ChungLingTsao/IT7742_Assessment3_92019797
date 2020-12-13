@@ -1,11 +1,11 @@
 ﻿/* 
  * Exceptions.cs
  * Author: Chung-Ling Tsao (92019797)
- * Description: The exception class that will throw an exception for a failed withdrawl.
+ * Description: The exception class that will throw custom exceptions.
 */
 using System;
 
-namespace Assessment2
+namespace Assessment3
 {
     [Serializable]
     public class FailedWithdrawlException : Exception
@@ -28,4 +28,14 @@ namespace Assessment2
         {
         }
     }
+
+    [Serializable]
+    public class InvalidTransferAmountException : Exception
+    {
+        public InvalidTransferAmountException()
+            : base(String.Format("Invalid Transfer Amount"))
+        {
+        }
+    }
+    
 }
