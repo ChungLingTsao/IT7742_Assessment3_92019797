@@ -4,6 +4,7 @@
  * Description: Abstract class that is used to implement the other account subtypes
 */
 using System;
+using System.Collections.Generic;
 //using System.Runtime.Serialization.Formatters.Binary;
 //using System.Runtime.Serialization;
 
@@ -19,11 +20,15 @@ namespace Assessment3
         public abstract double GetOverdraftLimit();
         public abstract double GetFailFee();
 
+        private List<Transaction> _transactionsList; // A customer should be able to have any number of accounts.
+
         public Account(int accountID, double balance, AccountTypes type)
         {
             _accountID = accountID;
             _balance = balance;
             _accountType = type;
+
+            _transactionsList = new List<Transaction>();
         }
 
         public int getAccountID()
@@ -60,6 +65,8 @@ namespace Assessment3
                 throw new FailedWithdrawlException();
             }
         }
+
+        public List<Transaction> TransactionsList { get => _transactionsList; set => _transactionsList = value; }
 
         public AccountTypes getAccountType()
         {

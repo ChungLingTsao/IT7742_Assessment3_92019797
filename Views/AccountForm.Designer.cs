@@ -30,12 +30,12 @@ namespace Assessment3
         private void InitializeComponent()
         {
             this.accountIDLabel = new System.Windows.Forms.Label();
-            this.tabeverydaybalanceLabel = new System.Windows.Forms.Label();
+            this.balanceLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabeverydayinputTextBox = new System.Windows.Forms.TextBox();
+            this.moneyInputTextBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.interestLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.addinterestButton = new System.Windows.Forms.Button();
             this.calculateinterestButton = new System.Windows.Forms.Button();
@@ -63,15 +63,15 @@ namespace Assessment3
             this.accountIDLabel.TabIndex = 28;
             this.accountIDLabel.Text = "Account ID";
             // 
-            // tabeverydaybalanceLabel
+            // balanceLabel
             // 
-            this.tabeverydaybalanceLabel.AutoSize = true;
-            this.tabeverydaybalanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabeverydaybalanceLabel.Location = new System.Drawing.Point(112, 318);
-            this.tabeverydaybalanceLabel.Name = "tabeverydaybalanceLabel";
-            this.tabeverydaybalanceLabel.Size = new System.Drawing.Size(120, 33);
-            this.tabeverydaybalanceLabel.TabIndex = 26;
-            this.tabeverydaybalanceLabel.Text = "Balance";
+            this.balanceLabel.AutoSize = true;
+            this.balanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balanceLabel.Location = new System.Drawing.Point(112, 318);
+            this.balanceLabel.Name = "balanceLabel";
+            this.balanceLabel.Size = new System.Drawing.Size(120, 33);
+            this.balanceLabel.TabIndex = 26;
+            this.balanceLabel.Text = "Balance";
             // 
             // label11
             // 
@@ -93,18 +93,18 @@ namespace Assessment3
             this.label4.TabIndex = 23;
             this.label4.Text = "Enter an amount ($):";
             // 
-            // tabeverydayinputTextBox
+            // moneyInputTextBox
             // 
-            this.tabeverydayinputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabeverydayinputTextBox.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.tabeverydayinputTextBox.Location = new System.Drawing.Point(30, 60);
-            this.tabeverydayinputTextBox.Name = "tabeverydayinputTextBox";
-            this.tabeverydayinputTextBox.Size = new System.Drawing.Size(270, 31);
-            this.tabeverydayinputTextBox.TabIndex = 2;
+            this.moneyInputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyInputTextBox.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.moneyInputTextBox.Location = new System.Drawing.Point(30, 60);
+            this.moneyInputTextBox.Name = "moneyInputTextBox";
+            this.moneyInputTextBox.Size = new System.Drawing.Size(270, 31);
+            this.moneyInputTextBox.TabIndex = 2;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.interestLabel);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.addinterestButton);
             this.groupBox3.Controls.Add(this.calculateinterestButton);
@@ -116,16 +116,16 @@ namespace Assessment3
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Interest";
             // 
-            // label3
+            // interestLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(202, 54);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 37);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "0.00%";
+            this.interestLabel.AutoSize = true;
+            this.interestLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.interestLabel.Location = new System.Drawing.Point(202, 54);
+            this.interestLabel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.interestLabel.Name = "interestLabel";
+            this.interestLabel.Size = new System.Drawing.Size(108, 37);
+            this.interestLabel.TabIndex = 40;
+            this.interestLabel.Text = "0.00%";
             // 
             // label1
             // 
@@ -165,7 +165,7 @@ namespace Assessment3
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.tabeverydayinputTextBox);
+            this.groupBox2.Controls.Add(this.moneyInputTextBox);
             this.groupBox2.Controls.Add(this.depositButton);
             this.groupBox2.Controls.Add(this.withdrawButton);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,6 +187,7 @@ namespace Assessment3
             this.depositButton.TabIndex = 35;
             this.depositButton.Text = "Deposit";
             this.depositButton.UseVisualStyleBackColor = true;
+            this.depositButton.Click += new System.EventHandler(this.depositButton_Click);
             // 
             // withdrawButton
             // 
@@ -276,7 +277,7 @@ namespace Assessment3
             this.Controls.Add(this.switchaccountButton);
             this.Controls.Add(this.accountinfoButton);
             this.Controls.Add(this.accountIDLabel);
-            this.Controls.Add(this.tabeverydaybalanceLabel);
+            this.Controls.Add(this.balanceLabel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.accountTypeLabel);
@@ -284,7 +285,7 @@ namespace Assessment3
             this.Controls.SetChildIndex(this.accountTypeLabel, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.label11, 0);
-            this.Controls.SetChildIndex(this.tabeverydaybalanceLabel, 0);
+            this.Controls.SetChildIndex(this.balanceLabel, 0);
             this.Controls.SetChildIndex(this.accountIDLabel, 0);
             this.Controls.SetChildIndex(this.accountinfoButton, 0);
             this.Controls.SetChildIndex(this.switchaccountButton, 0);
@@ -304,10 +305,10 @@ namespace Assessment3
 
         #endregion
         private System.Windows.Forms.Label accountIDLabel;
-        private System.Windows.Forms.Label tabeverydaybalanceLabel;
+        private System.Windows.Forms.Label balanceLabel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tabeverydayinputTextBox;
+        private System.Windows.Forms.TextBox moneyInputTextBox;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label accountTypeLabel;
@@ -320,7 +321,7 @@ namespace Assessment3
         private System.Windows.Forms.Button switchaccountButton;
         private System.Windows.Forms.ListBox tabeverydayListBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label interestLabel;
         private System.Windows.Forms.Button button1;
     }
 }

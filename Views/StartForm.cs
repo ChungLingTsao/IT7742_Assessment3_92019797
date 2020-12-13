@@ -7,7 +7,7 @@ namespace Assessment3
         public StartForm()
         {
             InitializeComponent();
-            CustomerRepository.getInstance().ReadBinaryData();
+            //CustomerRepository.getInstance().ReadBinaryData();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

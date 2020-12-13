@@ -86,11 +86,71 @@ namespace Assessment3
             WriteBinaryData();
         }
 
+        public void EditAccount(Customer editedCustomer, int previousID)
+        {
+            if (editedCustomer.Name == "")
+            {
+                throw new InvalidCustomerException();
+            }
+            else
+            {
+                customerRepo.RemoveAll(Customer => Customer.CustomerNumber == previousID);
+
+                customerRepo.Add(editedCustomer);
+
+                //foreach (Customer uneditedcustomer in customerRepo)
+                //{
+                //    if (uneditedcustomer.CustomerNumber == editedCustomer.CustomerNumber)
+                //    {
+                //        customerRepo.Remove(uneditedcustomer);
+                //    }
+                //}
+            }
+            WriteBinaryData();
+        }
+
         public List<Customer> GetAllCustomers()
         {
             ReadBinaryData();
             return this.customerRepo;
         }
+
+        public List<Account> GetAccountListByCustomerId(int customerID)
+        {
+            Customer c = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
+
+            return c.AccountList;
+        }
+
+        public void DepositTransactionToCustomerAccount(double deposit, int customerID, int accountID)
+        {
+            Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
+            //Customer c = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
+            Account selectedAccount = SelectAccountFromAccountList(selectedCustomer, accountID);
+            //Account a = (from account in c.AccountList where account.getAccountID() == accountID select account).First();
+
+            selectedAccount.Deposit(deposit);
+
+            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == accountID);
+            selectedCustomer.AccountList.Add(selectedAccount);
+
+            EditCustomer(selectedCustomer, customerID);
+        }
+
+        public Customer SelectCustomerFromCustomerList(int customerID)
+        {
+            Customer selectedCustomer = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
+
+            return selectedCustomer;
+        }
+
+        public Account SelectAccountFromAccountList(Customer customer, int accountID)
+        {
+            Account selectedAccount = (from account in customer.AccountList where account.getAccountID() == accountID select account).First();
+            return selectedAccount;
+        }
+
+
 
         public void WriteBinaryData()
         {

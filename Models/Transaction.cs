@@ -3,11 +3,13 @@
  * Author: Chung-Ling Tsao (92019797)
  * Description: Implements the transactions for the banking system
 */
+using System;
 using System.Threading;
 
-namespace Assessment3.Models
+namespace Assessment3
 {
-    class Transaction
+    [Serializable]
+    public class Transaction
     {
         private Account _accountType;
         private ActionTypes _actionType;
