@@ -45,7 +45,7 @@ namespace Assessment3
             this.accountTypeLabel = new System.Windows.Forms.Label();
             this.accountinfoButton = new System.Windows.Forms.Button();
             this.switchaccountButton = new System.Windows.Forms.Button();
-            this.tabeverydayListBox = new System.Windows.Forms.ListBox();
+            this.transactionListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
@@ -148,6 +148,7 @@ namespace Assessment3
             this.addinterestButton.TabIndex = 32;
             this.addinterestButton.Text = "Add Interest";
             this.addinterestButton.UseVisualStyleBackColor = true;
+            this.addinterestButton.Click += new System.EventHandler(this.addinterestButton_Click);
             // 
             // calculateinterestButton
             // 
@@ -200,6 +201,7 @@ namespace Assessment3
             this.withdrawButton.TabIndex = 34;
             this.withdrawButton.Text = "Withdraw";
             this.withdrawButton.UseVisualStyleBackColor = true;
+            this.withdrawButton.Click += new System.EventHandler(this.withdrawButton_Click);
             // 
             // accountTypeLabel
             // 
@@ -223,6 +225,7 @@ namespace Assessment3
             this.accountinfoButton.TabIndex = 36;
             this.accountinfoButton.Text = "Account Info (?)";
             this.accountinfoButton.UseVisualStyleBackColor = true;
+            this.accountinfoButton.Click += new System.EventHandler(this.accountinfoButton_Click);
             // 
             // switchaccountButton
             // 
@@ -235,15 +238,16 @@ namespace Assessment3
             this.switchaccountButton.TabIndex = 37;
             this.switchaccountButton.Text = "Switch Account";
             this.switchaccountButton.UseVisualStyleBackColor = true;
+            this.switchaccountButton.Click += new System.EventHandler(this.switchaccountButton_Click);
             // 
-            // tabeverydayListBox
+            // transactionListBox
             // 
-            this.tabeverydayListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabeverydayListBox.FormattingEnabled = true;
-            this.tabeverydayListBox.Location = new System.Drawing.Point(482, 499);
-            this.tabeverydayListBox.Name = "tabeverydayListBox";
-            this.tabeverydayListBox.Size = new System.Drawing.Size(679, 121);
-            this.tabeverydayListBox.TabIndex = 38;
+            this.transactionListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionListBox.FormattingEnabled = true;
+            this.transactionListBox.Location = new System.Drawing.Point(482, 499);
+            this.transactionListBox.Name = "transactionListBox";
+            this.transactionListBox.Size = new System.Drawing.Size(679, 121);
+            this.transactionListBox.TabIndex = 38;
             // 
             // label2
             // 
@@ -266,13 +270,14 @@ namespace Assessment3
             this.button1.TabIndex = 40;
             this.button1.Text = "Transfer from here";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AccountForm
             // 
             this.ClientSize = new System.Drawing.Size(1260, 677);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tabeverydayListBox);
+            this.Controls.Add(this.transactionListBox);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.switchaccountButton);
             this.Controls.Add(this.accountinfoButton);
@@ -291,7 +296,7 @@ namespace Assessment3
             this.Controls.SetChildIndex(this.switchaccountButton, 0);
             this.Controls.SetChildIndex(this.groupBox3, 0);
             this.Controls.SetChildIndex(this.titleLabel, 0);
-            this.Controls.SetChildIndex(this.tabeverydayListBox, 0);
+            this.Controls.SetChildIndex(this.transactionListBox, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.groupBox3.ResumeLayout(false);
@@ -319,7 +324,7 @@ namespace Assessment3
         private System.Windows.Forms.Button withdrawButton;
         private System.Windows.Forms.Button accountinfoButton;
         private System.Windows.Forms.Button switchaccountButton;
-        private System.Windows.Forms.ListBox tabeverydayListBox;
+        private System.Windows.Forms.ListBox transactionListBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label interestLabel;
         private System.Windows.Forms.Button button1;

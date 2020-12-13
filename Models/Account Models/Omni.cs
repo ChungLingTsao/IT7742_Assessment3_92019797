@@ -51,6 +51,11 @@ namespace Assessment3
             return _failFee;
         }
 
+        public override double GetRequiredBalance()
+        {
+            return _requiredBalance;
+        }
+
         public bool isSufficentBalance()
         {
             return _sufficentBalance;

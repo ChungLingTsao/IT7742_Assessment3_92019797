@@ -19,6 +19,7 @@ namespace Assessment3
         public abstract double GetInterestRate();
         public abstract double GetOverdraftLimit();
         public abstract double GetFailFee();
+        public abstract double GetRequiredBalance();
 
         private List<Transaction> _transactionsList; // A customer should be able to have any number of accounts.
 

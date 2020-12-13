@@ -35,7 +35,7 @@ namespace Assessment3
             this.manageButton = new System.Windows.Forms.Button();
             this.addnewButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -97,18 +97,18 @@ namespace Assessment3
             this.label1.TabIndex = 27;
             this.label1.Text = "Select an account";
             // 
-            // button1
+            // refreshButton
             // 
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.button1.Location = new System.Drawing.Point(891, 529);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(270, 90);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Delete Selected Account";
-            this.button1.UseVisualStyleBackColor = true;
+            this.refreshButton.FlatAppearance.BorderSize = 3;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.refreshButton.Location = new System.Drawing.Point(891, 529);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(270, 90);
+            this.refreshButton.TabIndex = 28;
+            this.refreshButton.Text = "Refresh Account List";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // backButton
             // 
@@ -127,7 +127,7 @@ namespace Assessment3
             // 
             this.ClientSize = new System.Drawing.Size(1260, 677);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.accountListBox);
             this.Controls.Add(this.manageButton);
@@ -140,7 +140,7 @@ namespace Assessment3
             this.Controls.SetChildIndex(this.manageButton, 0);
             this.Controls.SetChildIndex(this.accountListBox, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.refreshButton, 0);
             this.Controls.SetChildIndex(this.backButton, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,7 +154,7 @@ namespace Assessment3
         private System.Windows.Forms.Button manageButton;
         private System.Windows.Forms.Button addnewButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Button backButton;
     }
 }

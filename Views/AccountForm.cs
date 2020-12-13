@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static Assessment3.Enums;
 
 namespace Assessment3
 {
@@ -12,23 +13,14 @@ namespace Assessment3
 
         public AccountForm(Everyday everyday, Customer currentCustomer)
         {
-            //SessionController sessionController = new SessionController();
-            //int customerID = sessionController.GetSessionID();
-            //int accountID = 1;
-
-            //Customer selectedCustomer = customerRepository.Find(x => x.CustomerNumber == customerID);
-            //Account selectedAccount = selectedCustomer.AccountList.Find(x => x.getAccountID() == accountID);
-
-
-
-            //   MessageBox.Show(everyday.GetInterestRate().ToString());
             account = everyday;
             customer = currentCustomer;
             InitializeComponent();
+            InitialiseFields();
             this.accountTypeLabel.Text = account.getAccountType().ToString();
-            this.accountIDLabel.Text = account.getAccountID().ToString();
-            this.balanceLabel.Text = account.getBalance().ToString("c");
-            this.interestLabel.Text = account.GetInterestRate().ToString("P");
+            //this.accountIDLabel.Text = account.getAccountID().ToString();
+            //this.balanceLabel.Text = account.getBalance().ToString("c");
+            //this.interestLabel.Text = account.GetInterestRate().ToString("P");
         }
 
         public AccountForm(Investment investment, Customer currentCustomer)
@@ -36,6 +28,7 @@ namespace Assessment3
             account = investment;
             customer = currentCustomer;
             InitializeComponent();
+            InitialiseFields();
             this.accountTypeLabel.Text = investment.getAccountType().ToString();
             this.accountIDLabel.Text = investment.getAccountID().ToString();
             this.balanceLabel.Text = investment.getBalance().ToString("c");
@@ -47,40 +40,151 @@ namespace Assessment3
             account = omni;
             customer = currentCustomer;
             InitializeComponent();
+            InitialiseFields();
             this.accountTypeLabel.Text = omni.getAccountType().ToString();
             this.accountIDLabel.Text = omni.getAccountID().ToString();
             this.balanceLabel.Text = omni.getBalance().ToString("c");
             this.interestLabel.Text = omni.GetInterestRate().ToString("P");
         }
 
-        private void calculateinterestButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void depositButton_Click(object sender, EventArgs e)
         {
             //AccountController accountController = new AccountController();
-           // accountController.Deposit(Convert.ToDouble(moneyInputTextBox.Text), customer , account);
+            // accountController.Deposit(Convert.ToDouble(moneyInputTextBox.Text), customer , account);
+            double creditAmount = Convert.ToDouble(moneyInputTextBox.Text);
 
             TransactionController transactionController = new TransactionController();
-            transactionController.Deposit(Convert.ToDouble(moneyInputTextBox.Text), customer.CustomerNumber, account.getAccountID());
+            transactionController.Deposit(creditAmount, customer.CustomerNumber, account.getAccountID());
+
+            int nextId = account.TransactionsList.Count + 1;
+            Transaction transaction = new Transaction(nextId, false, creditAmount, account, ActionTypes.Deposit);
+            
+            transactionController.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
+
+            account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
+            //MessageBox.Show(account.getBalance().ToString());
             InitialiseFields();
         }
 
-        private void InitialiseFields()
+        public void InitialiseFields()
         {
-           // List<Account> accountlist = CustomerRepository.getInstance().GetAccountListByCustomerId(customer.CustomerNumber);
-            Account currentAccount = CustomerRepository.getInstance().SelectAccountFromAccountList(customer,account.getAccountID());
+            //MessageBox.Show(account.getBalance().ToString("c"));
 
-            MessageBox.Show(currentAccount.getBalance().ToString("c"));
-            //this.accountTypeLabel.Text = currentAccount.getAccountType().ToString();
-            this.accountIDLabel.Text = currentAccount.getAccountID().ToString();
-            this.balanceLabel.Text = currentAccount.getBalance().ToString("c");
-            this.interestLabel.Text = currentAccount.GetInterestRate().ToString("P");
+            // Refresh the customer and account fields before redrawing form fields
+            CustomerRepository.getInstance().ReadBinaryData();
+            customer = CustomerRepository.getInstance().SelectCustomerFromCustomerList(customer.CustomerNumber);
+            account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
 
+            this.accountIDLabel.Text = account.getAccountID().ToString();
+            this.balanceLabel.Text = account.getBalance().ToString("c");
+            this.interestLabel.Text = account.GetInterestRate().ToString("P");
 
-//            CustomerRepository.getInstance().EditCustomer(customer, customer.CustomerNumber);
+            this.transactionListBox.Items.Clear();
+            foreach (Transaction transaction in account.TransactionsList)
+            {
+                //transactionListBox.Items.Add(transaction.GetAmount().ToString("c") + " " + transaction.GetActionType().ToString() + transaction.transactionID);
+                transactionListBox.Items.Add(transaction.ToString());
+            }
+        }
+
+        private void switchaccountButton_Click(object sender, EventArgs e)
+        {
+            ManageAccountsForm manageAccountForm = new ManageAccountsForm(customer);
+            this.Hide();
+            manageAccountForm.ShowDialog();
+            this.Close();
+        }
+
+        private void withdrawButton_Click(object sender, EventArgs e)
+        {
+            //TransactionController transactionController = new TransactionController();
+            //transactionController.Withdraw(Convert.ToDouble(moneyInputTextBox.Text), customer.CustomerNumber, account.getAccountID());
+
+            //account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
+            //MessageBox.Show(account.getBalance().ToString());
+            //InitialiseFields();
+
+            double debitAmount = Convert.ToDouble(moneyInputTextBox.Text);
+
+            TransactionController transactionController = new TransactionController();
+            transactionController.Withdraw(debitAmount, customer.CustomerNumber, account.getAccountID());
+           
+            int nextId = account.TransactionsList.Count + 1;
+            Transaction transaction = new Transaction(nextId, false, debitAmount, account, ActionTypes.Withdraw);
+
+            transactionController.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
+
+            account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
+            
+            InitialiseFields();
+        }
+
+        private void calculateinterestButton_Click(object sender, EventArgs e)
+        {
+            double rate = account.GetInterestRate();
+            double balance = account.getBalance();
+            double interestRecieved = rate * balance;
+
+            MessageBox.Show($"Interest recieved per annum is: ${interestRecieved:F} \n\n" +
+                "Calculated using: \n" +
+                $"Rate: {(rate * 100):F}% \n" +
+                $"Balance: ${balance:F}",
+                "Calculating interest");
+        }
+
+        private void addinterestButton_Click(object sender, EventArgs e)
+        {
+            double interestRecieved = account.GetInterestRate() * account.getBalance();
+
+            TransactionController transactionController = new TransactionController();
+            transactionController.AddInterest(interestRecieved, customer.CustomerNumber, account.getAccountID());
+
+            //account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
+          //  MessageBox.Show(account.getBalance().ToString());
+           // InitialiseFields();
+
+            
+
+            int nextId = account.TransactionsList.Count + 1;
+            Transaction transaction = new Transaction(nextId, false, interestRecieved, account, ActionTypes.Add_Interest);
+
+            transactionController.RecordTransaction(transaction, customer.CustomerNumber, account.getAccountID());
+
+            account = CustomerRepository.getInstance().SelectAccountFromAccountList(customer, account.getAccountID());
+            //MessageBox.Show(account.getBalance().ToString());
+            InitialiseFields();
+
+            //Transaction transaction = new Transaction(false, interestRecieved, account, ActionTypes.Add_Interest);
+        }
+
+        private void accountinfoButton_Click(object sender, EventArgs e)
+        {
+            double requiredBalance = account.GetRequiredBalance();
+            string requiredBalanceInfo;
+
+            if (requiredBalance > 0)
+            {
+                requiredBalanceInfo = ("Required Balance for gaining interest: $" + requiredBalance.ToString("F"));
+            }
+            else
+            {
+                requiredBalanceInfo = "";
+            }
+
+            MessageBox.Show($"Account Type: {account.getAccountType()} \n" +
+            $"Interest Rate: {account.GetInterestRate() * 100}% \n" +
+            $"Overdraft Limit: ${account.GetOverdraftLimit():F} \n" +
+            $"Failed Transaction Fee: ${account.GetOverdraftLimit():F} \n" +
+            requiredBalanceInfo, 
+            "Account Information");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            TransferForm transferForm = new TransferForm(account, customer);
+            transferForm.ShowDialog();
+            //this.Close();
         }
     }
 }

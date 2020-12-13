@@ -31,7 +31,6 @@ namespace Assessment3
         {
             this.titleLabel = new System.Windows.Forms.Label();
             this.blackTextBox = new System.Windows.Forms.TextBox();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -62,24 +61,12 @@ namespace Assessment3
             this.blackTextBox.Size = new System.Drawing.Size(800, 80);
             this.blackTextBox.TabIndex = 17;
             // 
-            // cancelButton
-            // 
-            this.cancelButton.FlatAppearance.BorderSize = 3;
-            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.cancelButton.Location = new System.Drawing.Point(486, 354);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(270, 60);
-            this.cancelButton.TabIndex = 25;
-            this.cancelButton.Text = "Cancel";
-            // 
             // PopupParentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.blackTextBox);
             this.Name = "PopupParentForm";
@@ -93,6 +80,5 @@ namespace Assessment3
 
         public System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.TextBox blackTextBox;
-        private System.Windows.Forms.Button cancelButton;
     }
 }

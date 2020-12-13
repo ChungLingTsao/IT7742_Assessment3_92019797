@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Assessment3.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,20 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculator.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\Exceptions.cs" />
     <Compile Include="Models\Customer Models\CustomerRepository.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Models\Transaction.cs" />
-    <Compile Include="Views\BankingSystemApp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\BankingSystemApp.designer.cs">
-      <DependentUpon>BankingSystemApp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\CRUDCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,9 +147,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\BankingSystemApp.resx">
-      <DependentUpon>BankingSystemApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CRUDCustomerForm.resx">
       <DependentUpon>CRUDCustomerForm.cs</DependentUpon>

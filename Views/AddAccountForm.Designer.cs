@@ -33,6 +33,7 @@ namespace Assessment3
             this.omniButton = new System.Windows.Forms.Button();
             this.investmentButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // everydayButton
@@ -84,10 +85,23 @@ namespace Assessment3
             this.label1.TabIndex = 36;
             this.label1.Text = "Choose an account to add";
             // 
+            // cancelButton
+            // 
+            this.cancelButton.FlatAppearance.BorderSize = 3;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.cancelButton.Location = new System.Drawing.Point(486, 356);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(270, 60);
+            this.cancelButton.TabIndex = 37;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
             // AddAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.omniButton);
             this.Controls.Add(this.investmentButton);
@@ -98,6 +112,7 @@ namespace Assessment3
             this.Controls.SetChildIndex(this.omniButton, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.titleLabel, 0);
+            this.Controls.SetChildIndex(this.cancelButton, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +124,6 @@ namespace Assessment3
         private System.Windows.Forms.Button omniButton;
         private System.Windows.Forms.Button investmentButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

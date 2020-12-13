@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment3", "Assessment3.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assessment3Tests", "..\Assessment2Tests\Assessment3Tests.csproj", "{9C0586D0-5E26-415E-BDE8-89A6D1D113DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowAssessment3.Specs", "..\SpecFlowAssessment3.Specs\SpecFlowAssessment3.Specs.csproj", "{E6416173-353C-48A2-B758-BE598734E986}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9C0586D0-5E26-415E-BDE8-89A6D1D113DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0586D0-5E26-415E-BDE8-89A6D1D113DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0586D0-5E26-415E-BDE8-89A6D1D113DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6416173-353C-48A2-B758-BE598734E986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6416173-353C-48A2-B758-BE598734E986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6416173-353C-48A2-B758-BE598734E986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6416173-353C-48A2-B758-BE598734E986}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

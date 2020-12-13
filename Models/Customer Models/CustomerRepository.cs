@@ -117,6 +117,7 @@ namespace Assessment3
 
         public List<Account> GetAccountListByCustomerId(int customerID)
         {
+            ReadBinaryData();
             Customer c = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
 
             return c.AccountList;
@@ -137,8 +138,36 @@ namespace Assessment3
             EditCustomer(selectedCustomer, customerID);
         }
 
+        public void WithdrawTransactionFromCustomerAccount(double debit, int customerID, int accountID)
+        {
+            Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
+            Account selectedAccount = SelectAccountFromAccountList(selectedCustomer, accountID);
+
+            selectedAccount.Withdraw(debit);
+
+            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == accountID);
+            selectedCustomer.AccountList.Add(selectedAccount);
+
+            EditCustomer(selectedCustomer, customerID);
+        }
+
+        public void RecordTransactionToTransactionList(Transaction transaction, int customerID, int accountID)
+        {
+            Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
+            Account selectedAccount = SelectAccountFromAccountList(selectedCustomer, accountID);
+
+            selectedAccount.TransactionsList.Add(transaction);
+
+            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == accountID);
+            selectedCustomer.AccountList.Add(selectedAccount);
+
+            EditCustomer(selectedCustomer, customerID);
+        }
+        
+
         public Customer SelectCustomerFromCustomerList(int customerID)
         {
+            ReadBinaryData();
             Customer selectedCustomer = (from customer in customerRepo where customer.CustomerNumber == customerID select customer).First();
 
             return selectedCustomer;
@@ -146,11 +175,35 @@ namespace Assessment3
 
         public Account SelectAccountFromAccountList(Customer customer, int accountID)
         {
+            ReadBinaryData();
             Account selectedAccount = (from account in customer.AccountList where account.getAccountID() == accountID select account).First();
             return selectedAccount;
         }
 
+        public void TransferAmountFromAccountToAccount2(double transferAmount, int customerID, int fromAccountID, int toAccountID) 
+        {
+            Customer selectedCustomer = SelectCustomerFromCustomerList(customerID);
+            
+            Account fromAccount = SelectAccountFromAccountList(selectedCustomer, fromAccountID);
+            Account toAccount = SelectAccountFromAccountList(selectedCustomer, toAccountID);
 
+            fromAccount.Withdraw(transferAmount);
+            toAccount.Deposit(transferAmount);
+
+            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == fromAccountID);
+            selectedCustomer.AccountList.Add(fromAccount);
+            selectedCustomer.AccountList.RemoveAll(Account => Account.getAccountID() == toAccountID);
+            selectedCustomer.AccountList.Add(toAccount);
+
+            EditCustomer(selectedCustomer, customerID);
+        }
+
+        public void AddNewAccount(Customer customer, Account account)
+        {
+            Customer selectedCustomer = SelectCustomerFromCustomerList(customer.CustomerNumber);
+            selectedCustomer.AccountList.Add(account);
+            EditCustomer(selectedCustomer, customer.CustomerNumber);
+        }
 
         public void WriteBinaryData()
         {

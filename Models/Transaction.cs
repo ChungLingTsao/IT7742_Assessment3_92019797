@@ -5,25 +5,27 @@
 */
 using System;
 using System.Threading;
+using static Assessment3.Enums;
 
 namespace Assessment3
 {
     [Serializable]
     public class Transaction
     {
+        private int _transactionID;
         private Account _accountType;
         private ActionTypes _actionType;
         private bool _isFailed;
         private double _amount;
         private double _remainingBalance;
 
-        public int transactionID { get; private set; } // Prototype doesn't require incremental transaction IDs
-        public static int nextID;
+        //static int nextID;
 
         // Constructor
-        public Transaction(bool transactionFail, double amount, Account account, ActionTypes action)
+        public Transaction(int transactionID, bool transactionFail, double amount, Account account, ActionTypes action)
         {
-            transactionID = Interlocked.Increment(ref nextID);
+            //transactionID = Interlocked.Increment(ref nextID);
+            _transactionID = transactionID;
             _isFailed = transactionFail;
             _amount = amount;
             _accountType = account;
@@ -31,9 +33,19 @@ namespace Assessment3
             _remainingBalance = account.getBalance();
         }
 
-        public Account GetAccount()
+        public double GetAmount()
         {
-            return _accountType;
+            return _amount;
+        }
+
+        public void SetTransactionID(int transactionID)
+        {
+            _transactionID = transactionID;
+        }
+
+        public ActionTypes GetActionType()
+        {
+            return _actionType;
         }
 
         public double GetRemainingBalance()
@@ -54,7 +66,19 @@ namespace Assessment3
                 return $"{_accountType.getAccountType()} Account ID: {_accountType.getAccountID()}; Interest Rate: {_accountType.GetInterestRate():F}%; Overdraft Limit: ${_accountType.GetOverdraftLimit():F}; Fee: ${_accountType.GetFailFee():F}; Balance: ${_remainingBalance:F}";
             }
 
-            else if ((_actionType == ActionTypes.Deposit) || (_actionType == ActionTypes.Add_Interest) || (_actionType == ActionTypes.Withdraw))
+            else if ((_actionType == ActionTypes.Deposit) || (_actionType == ActionTypes.Add_Interest))
+            {
+                double currentBalance = _remainingBalance + _amount;
+                return $"{_accountType.getAccountType()} Account ID: {_accountType.getAccountID()}; {_actionType} ${_amount:F}; Balance: ${currentBalance:F}";
+            }
+
+            else if (_actionType == ActionTypes.Withdraw)
+            {
+                double currentBalance = _remainingBalance - _amount;
+                return $"{_accountType.getAccountType()} Account ID: {_accountType.getAccountID()}; {_actionType} ${_amount:F}; Balance: ${currentBalance:F}";
+            }
+
+            else if (_actionType == ActionTypes.Transfer)
             {
                 return $"{_accountType.getAccountType()} Account ID: {_accountType.getAccountID()}; {_actionType} ${_amount:F}; Balance: ${_remainingBalance:F}";
             }

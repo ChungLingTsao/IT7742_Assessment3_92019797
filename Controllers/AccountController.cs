@@ -1,4 +1,17 @@
-﻿/* 
+﻿/// <summary>
+/// The <c>AccountController </c>
+/// This class will be responsible for taking an user input and sending the approriate 
+/// response to perform a function related to Accounts
+/// <list type="bullet">
+/// <item>
+/// <term>AddAccount</term>
+/// <description>Adds Account to Customer</description>
+/// </item>
+/// </summary>
+/// <remarks>
+/// <para>This class is the controller that adds accounts to customers.</para>
+/// </remarks>
+/* 
  * CustomerController.cs
  * Author: Chung-Ling Tsao (92019797)
  * Description: This controller class will be responsible for how the user interacts with the application.
@@ -11,28 +24,21 @@ namespace Assessment3
 {
     public class AccountController
 	{
-		public void Deposit(double credit, Customer customer, Account account)
-		{
-			CustomerRepository.getInstance().DepositTransactionToCustomerAccount(credit, customer.CustomerNumber, account.getAccountID());
-		}
-
-		public void AddAccount(Investment investment)
-		{
-		}
-
-		public void AddAccount(Omni omni)
-		{
-		}
-
-		//public void EditCustomer(int id, string name, string phone, string email, string address, string suburb, string city, string zip, bool isStaff)
-		//{
-		//	Customer newCust = new Customer(id, name, phone, email, address, suburb, city, zip, isStaff);
-		//	CustomerRepository.getInstance().EditCustomer(newCust, id);
-		//}
-
-		//public void DeleteCustomer(int deleteCustID)
-		//{
-		//	CustomerRepository.getInstance().DeleteCustomer(deleteCustID);
-		//}
+        // Adds an everyday account to customer
+        /// <summary>
+        /// Adds an account <paramref name="account"/> to a customer <paramref name="customer"/>
+        /// </summary>
+        /// <example>
+        /// <code>
+        /// AccountController accountController = new AccountController();
+        /// accountController.AddAccount(currentCustomer, newEveryday);
+        /// </code>
+        /// </example>
+        /// <param name="account">An account.</param>
+        /// <param name="customer">A customer.</param>
+        public void AddAccount(Customer customer, Account account)
+        {
+            CustomerRepository.getInstance().AddNewAccount(customer, account);
+        }
 	}
 }

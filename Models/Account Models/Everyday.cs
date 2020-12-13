@@ -30,5 +30,10 @@ namespace Assessment3
         {
             return 0; // No fees. Also used to display the no fee info.
         }
+
+        public override double GetRequiredBalance()
+        {
+            return 0; // As if it is not implemented. Field expects a non-zero interger.
+        }
     }
 }

@@ -35,5 +35,10 @@ namespace Assessment3
         {
             return _failFee;
         }
+
+        public override double GetRequiredBalance()
+        {
+            return 0; // As if it is not implemented. Field expects a non-zero interger.
+        }
     }
 }
