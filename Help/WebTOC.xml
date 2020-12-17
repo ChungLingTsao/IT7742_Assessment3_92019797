@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="0e87bbba-28b4-4659-842f-f24b8765e5cf" Title="Assessment3 Namespace" Url="html/N-Assessment3.htm">
+    <HelpTOCNode Id="6aa66e5e-7e0e-4271-acf6-22fc181c7e41" Title="Account Class" Url="html/T-Assessment3.Account.htm">
+      <HelpTOCNode Title="Account Members" Url="html/AllMembers.T-Assessment3.Account.htm" />
+      <HelpTOCNode Title="Account Constructor " Url="html/M-Assessment3.Account.-ctor.htm" />
+      <HelpTOCNode Id="6ea11ed0-d2d7-4dbb-87b3-35404ad50f7a" Title="Account Methods" Url="html/Methods.T-Assessment3.Account.htm">
+        <HelpTOCNode Title="Deposit Method " Url="html/M-Assessment3.Account.Deposit.htm" />
+        <HelpTOCNode Title="getAccountID Method " Url="html/M-Assessment3.Account.getAccountID.htm" />
+        <HelpTOCNode Title="getAccountType Method " Url="html/M-Assessment3.Account.getAccountType.htm" />
+        <HelpTOCNode Title="getBalance Method " Url="html/M-Assessment3.Account.getBalance.htm" />
+        <HelpTOCNode Title="GetFailFee Method " Url="html/M-Assessment3.Account.GetFailFee.htm" />
+        <HelpTOCNode Title="GetInterestRate Method " Url="html/M-Assessment3.Account.GetInterestRate.htm" />
+        <HelpTOCNode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Account.GetOverdraftLimit.htm" />
+        <HelpTOCNode Title="GetRequiredBalance Method " Url="html/M-Assessment3.Account.GetRequiredBalance.htm" />
+        <HelpTOCNode Title="setBalance Method " Url="html/M-Assessment3.Account.setBalance.htm" />
+        <HelpTOCNode Title="Withdraw Method " Url="html/M-Assessment3.Account.Withdraw.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f899378e-50f7-4962-85cb-d6e3a5f72067" Title="Account Properties" Url="html/Properties.T-Assessment3.Account.htm">
+        <HelpTOCNode Title="TransactionsList Property " Url="html/P-Assessment3.Account.TransactionsList.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="575a5377-befa-403e-8480-ac1d5c39138f" Title="AccountForm Class" Url="html/T-Assessment3.AccountForm.htm">
+      <HelpTOCNode Title="AccountForm Members" Url="html/AllMembers.T-Assessment3.AccountForm.htm" />
+      <HelpTOCNode Id="73104912-ce91-47b1-84e0-d1e1ef5da98b" Title="AccountForm Constructor " Url="html/Overload-Assessment3.AccountForm.-ctor.htm">
+        <HelpTOCNode Title="AccountForm Constructor (Everyday, Customer)" Url="html/M-Assessment3.AccountForm.-ctor.htm" />
+        <HelpTOCNode Title="AccountForm Constructor (Investment, Customer)" Url="html/M-Assessment3.AccountForm.-ctor_1.htm" />
+        <HelpTOCNode Title="AccountForm Constructor (Omni, Customer)" Url="html/M-Assessment3.AccountForm.-ctor_2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="93ca29c8-ab04-4154-b903-3ee45514d917" Title="AccountForm Methods" Url="html/Methods.T-Assessment3.AccountForm.htm">
+        <HelpTOCNode Title="InitialiseFields Method " Url="html/M-Assessment3.AccountForm.InitialiseFields.htm" />
+        <HelpTOCNode Title="validateMoneyInput Method " Url="html/M-Assessment3.AccountForm.validateMoneyInput.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="AccountForm Properties" Url="html/Properties.T-Assessment3.AccountForm.htm" />
+      <HelpTOCNode Title="AccountForm Events" Url="html/Events.T-Assessment3.AccountForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="e312b9c8-5e47-4f73-bd19-61127634d734" Title="AddAccountForm Class" Url="html/T-Assessment3.AddAccountForm.htm">
+      <HelpTOCNode Title="AddAccountForm Members" Url="html/AllMembers.T-Assessment3.AddAccountForm.htm" />
+      <HelpTOCNode Title="AddAccountForm Constructor " Url="html/M-Assessment3.AddAccountForm.-ctor.htm" />
+      <HelpTOCNode Title="AddAccountForm Methods" Url="html/Methods.T-Assessment3.AddAccountForm.htm" />
+      <HelpTOCNode Title="AddAccountForm Properties" Url="html/Properties.T-Assessment3.AddAccountForm.htm" />
+      <HelpTOCNode Title="AddAccountForm Events" Url="html/Events.T-Assessment3.AddAccountForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="40a84d25-b637-4fff-ba15-0686e1de1fec" Title="AddCustomerForm Class" Url="html/T-Assessment3.AddCustomerForm.htm">
+      <HelpTOCNode Title="AddCustomerForm Members" Url="html/AllMembers.T-Assessment3.AddCustomerForm.htm" />
+      <HelpTOCNode Title="AddCustomerForm Constructor " Url="html/M-Assessment3.AddCustomerForm.-ctor.htm" />
+      <HelpTOCNode Title="AddCustomerForm Methods" Url="html/Methods.T-Assessment3.AddCustomerForm.htm" />
+      <HelpTOCNode Title="AddCustomerForm Properties" Url="html/Properties.T-Assessment3.AddCustomerForm.htm" />
+      <HelpTOCNode Title="AddCustomerForm Events" Url="html/Events.T-Assessment3.AddCustomerForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="59d35abf-67bc-4e7a-a4d0-9e418aac251c" Title="BrandingParentForm Class" Url="html/T-Assessment3.BrandingParentForm.htm">
+      <HelpTOCNode Title="BrandingParentForm Members" Url="html/AllMembers.T-Assessment3.BrandingParentForm.htm" />
+      <HelpTOCNode Title="BrandingParentForm Constructor " Url="html/M-Assessment3.BrandingParentForm.-ctor.htm" />
+      <HelpTOCNode Id="6dae6a86-d574-4e86-a2c8-c5b2b1918760" Title="BrandingParentForm Fields" Url="html/Fields.T-Assessment3.BrandingParentForm.htm">
+        <HelpTOCNode Title="controller Field" Url="html/F-Assessment3.BrandingParentForm.controller.htm" />
+        <HelpTOCNode Title="titleLabel Field" Url="html/F-Assessment3.BrandingParentForm.titleLabel.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="BrandingParentForm Methods" Url="html/Methods.T-Assessment3.BrandingParentForm.htm" />
+      <HelpTOCNode Title="BrandingParentForm Properties" Url="html/Properties.T-Assessment3.BrandingParentForm.htm" />
+      <HelpTOCNode Title="BrandingParentForm Events" Url="html/Events.T-Assessment3.BrandingParentForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="ddf165bb-1aad-4cfe-ac78-7ed3cb3c76ef" Title="Controller Class" Url="html/T-Assessment3.Controller.htm">
+      <HelpTOCNode Title="Controller Members" Url="html/AllMembers.T-Assessment3.Controller.htm" />
+      <HelpTOCNode Id="8403d218-6980-4d53-9759-03dd532c317b" Title="Controller Methods" Url="html/Methods.T-Assessment3.Controller.htm">
+        <HelpTOCNode Title="AddAccount Method " Url="html/M-Assessment3.Controller.AddAccount.htm" />
+        <HelpTOCNode Title="AddCustomer Method " Url="html/M-Assessment3.Controller.AddCustomer.htm" />
+        <HelpTOCNode Title="AddInterest Method " Url="html/M-Assessment3.Controller.AddInterest.htm" />
+        <HelpTOCNode Title="DeleteCustomer Method " Url="html/M-Assessment3.Controller.DeleteCustomer.htm" />
+        <HelpTOCNode Title="Deposit Method " Url="html/M-Assessment3.Controller.Deposit.htm" />
+        <HelpTOCNode Title="EditCustomer Method " Url="html/M-Assessment3.Controller.EditCustomer.htm" />
+        <HelpTOCNode Title="RecordTransaction Method " Url="html/M-Assessment3.Controller.RecordTransaction.htm" />
+        <HelpTOCNode Title="Transfer Method " Url="html/M-Assessment3.Controller.Transfer.htm" />
+        <HelpTOCNode Title="Withdraw Method " Url="html/M-Assessment3.Controller.Withdraw.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="19b0699e-03cf-497b-9870-479a1b241831" Title="CRUDCustomerForm Class" Url="html/T-Assessment3.CRUDCustomerForm.htm">
+      <HelpTOCNode Title="CRUDCustomerForm Members" Url="html/AllMembers.T-Assessment3.CRUDCustomerForm.htm" />
+      <HelpTOCNode Title="CRUDCustomerForm Constructor " Url="html/M-Assessment3.CRUDCustomerForm.-ctor.htm" />
+      <HelpTOCNode Title="CRUDCustomerForm Methods" Url="html/Methods.T-Assessment3.CRUDCustomerForm.htm" />
+      <HelpTOCNode Title="CRUDCustomerForm Properties" Url="html/Properties.T-Assessment3.CRUDCustomerForm.htm" />
+      <HelpTOCNode Title="CRUDCustomerForm Events" Url="html/Events.T-Assessment3.CRUDCustomerForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="5622983d-1ff6-401d-bdc8-e20d2eff42cc" Title="CUDCustomerParentForm Class" Url="html/T-Assessment3.CUDCustomerParentForm.htm">
+      <HelpTOCNode Title="CUDCustomerParentForm Members" Url="html/AllMembers.T-Assessment3.CUDCustomerParentForm.htm" />
+      <HelpTOCNode Title="CUDCustomerParentForm Constructor " Url="html/M-Assessment3.CUDCustomerParentForm.-ctor.htm" />
+      <HelpTOCNode Id="f60e61bd-eb48-4b64-8978-170fac7151a2" Title="CUDCustomerParentForm Fields" Url="html/Fields.T-Assessment3.CUDCustomerParentForm.htm">
+        <HelpTOCNode Title="addressTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.addressTextBox.htm" />
+        <HelpTOCNode Title="button3 Field" Url="html/F-Assessment3.CUDCustomerParentForm.button3.htm" />
+        <HelpTOCNode Title="cityTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.cityTextBox.htm" />
+        <HelpTOCNode Title="emailTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.emailTextBox.htm" />
+        <HelpTOCNode Title="idTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.idTextBox.htm" />
+        <HelpTOCNode Title="nameTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.nameTextBox.htm" />
+        <HelpTOCNode Title="phoneTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.phoneTextBox.htm" />
+        <HelpTOCNode Title="staffCheckBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.staffCheckBox.htm" />
+        <HelpTOCNode Title="suburbTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.suburbTextBox.htm" />
+        <HelpTOCNode Title="zipTextBox Field" Url="html/F-Assessment3.CUDCustomerParentForm.zipTextBox.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="CUDCustomerParentForm Methods" Url="html/Methods.T-Assessment3.CUDCustomerParentForm.htm" />
+      <HelpTOCNode Title="CUDCustomerParentForm Properties" Url="html/Properties.T-Assessment3.CUDCustomerParentForm.htm" />
+      <HelpTOCNode Title="CUDCustomerParentForm Events" Url="html/Events.T-Assessment3.CUDCustomerParentForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="fbd5efc5-7193-487e-b3d3-a818393f0590" Title="Customer Class" Url="html/T-Assessment3.Customer.htm">
+      <HelpTOCNode Title="Customer Members" Url="html/AllMembers.T-Assessment3.Customer.htm" />
+      <HelpTOCNode Title="Customer Constructor " Url="html/M-Assessment3.Customer.-ctor.htm" />
+      <HelpTOCNode Id="f37d19a5-041a-4fb6-b05f-dba79daee416" Title="Customer Methods" Url="html/Methods.T-Assessment3.Customer.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/M-Assessment3.Customer.ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="481c360c-9d39-4851-b9e0-1f14c14ab57e" Title="Customer Properties" Url="html/Properties.T-Assessment3.Customer.htm">
+        <HelpTOCNode Title="AccountList Property " Url="html/P-Assessment3.Customer.AccountList.htm" />
+        <HelpTOCNode Title="Address Property " Url="html/P-Assessment3.Customer.Address.htm" />
+        <HelpTOCNode Title="City Property " Url="html/P-Assessment3.Customer.City.htm" />
+        <HelpTOCNode Title="CustomerNumber Property " Url="html/P-Assessment3.Customer.CustomerNumber.htm" />
+        <HelpTOCNode Title="Email Property " Url="html/P-Assessment3.Customer.Email.htm" />
+        <HelpTOCNode Title="IsStaff Property " Url="html/P-Assessment3.Customer.IsStaff.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P-Assessment3.Customer.Name.htm" />
+        <HelpTOCNode Title="Phone Property " Url="html/P-Assessment3.Customer.Phone.htm" />
+        <HelpTOCNode Title="Suburb Property " Url="html/P-Assessment3.Customer.Suburb.htm" />
+        <HelpTOCNode Title="Zip Property " Url="html/P-Assessment3.Customer.Zip.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d8fe5923-4aa0-4187-9bc2-bb530c4e3efb" Title="DeleteCustomerForm Class" Url="html/T-Assessment3.DeleteCustomerForm.htm">
+      <HelpTOCNode Title="DeleteCustomerForm Members" Url="html/AllMembers.T-Assessment3.DeleteCustomerForm.htm" />
+      <HelpTOCNode Title="DeleteCustomerForm Constructor " Url="html/M-Assessment3.DeleteCustomerForm.-ctor.htm" />
+      <HelpTOCNode Title="DeleteCustomerForm Methods" Url="html/Methods.T-Assessment3.DeleteCustomerForm.htm" />
+      <HelpTOCNode Title="DeleteCustomerForm Properties" Url="html/Properties.T-Assessment3.DeleteCustomerForm.htm" />
+      <HelpTOCNode Title="DeleteCustomerForm Events" Url="html/Events.T-Assessment3.DeleteCustomerForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="7b33bad8-2a45-4708-82d5-0d832ef41ea7" Title="EditCustomerForm Class" Url="html/T-Assessment3.EditCustomerForm.htm">
+      <HelpTOCNode Title="EditCustomerForm Members" Url="html/AllMembers.T-Assessment3.EditCustomerForm.htm" />
+      <HelpTOCNode Title="EditCustomerForm Constructor " Url="html/M-Assessment3.EditCustomerForm.-ctor.htm" />
+      <HelpTOCNode Title="EditCustomerForm Methods" Url="html/Methods.T-Assessment3.EditCustomerForm.htm" />
+      <HelpTOCNode Title="EditCustomerForm Properties" Url="html/Properties.T-Assessment3.EditCustomerForm.htm" />
+      <HelpTOCNode Title="EditCustomerForm Events" Url="html/Events.T-Assessment3.EditCustomerForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="75e071b8-1371-44a5-b1b6-048ed300148d" Title="Enums Class" Url="html/T-Assessment3.Enums.htm">
+      <HelpTOCNode Title="Enums Methods" Url="html/Methods.T-Assessment3.Enums.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Title="Enums.AccountTypes Enumeration" Url="html/T-Assessment3.Enums.AccountTypes.htm" />
+    <HelpTOCNode Title="Enums.ActionTypes Enumeration" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+    <HelpTOCNode Id="edda4854-e883-43d4-9967-d4a7cfc8c438" Title="Everyday Class" Url="html/T-Assessment3.Everyday.htm">
+      <HelpTOCNode Title="Everyday Members" Url="html/AllMembers.T-Assessment3.Everyday.htm" />
+      <HelpTOCNode Title="Everyday Constructor " Url="html/M-Assessment3.Everyday.-ctor.htm" />
+      <HelpTOCNode Id="8c4b487f-cc9f-4fb7-a2e3-88586bf9674e" Title="Everyday Methods" Url="html/Methods.T-Assessment3.Everyday.htm">
+        <HelpTOCNode Title="GetFailFee Method " Url="html/M-Assessment3.Everyday.GetFailFee.htm" />
+        <HelpTOCNode Title="GetInterestRate Method " Url="html/M-Assessment3.Everyday.GetInterestRate.htm" />
+        <HelpTOCNode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Everyday.GetOverdraftLimit.htm" />
+        <HelpTOCNode Title="GetRequiredBalance Method " Url="html/M-Assessment3.Everyday.GetRequiredBalance.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Everyday Properties" Url="html/Properties.T-Assessment3.Everyday.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="a9a86211-bc73-4b2b-8c04-bdafc3d5cc56" Title="FailedWithdrawlException Class" Url="html/T-Assessment3.FailedWithdrawlException.htm">
+      <HelpTOCNode Title="FailedWithdrawlException Members" Url="html/AllMembers.T-Assessment3.FailedWithdrawlException.htm" />
+      <HelpTOCNode Id="43ebb90f-2a3f-450e-8081-60f57665bc7f" Title="FailedWithdrawlException Constructor " Url="html/Overload-Assessment3.FailedWithdrawlException.-ctor.htm">
+        <HelpTOCNode Title="FailedWithdrawlException Constructor " Url="html/M-Assessment3.FailedWithdrawlException.-ctor.htm" />
+        <HelpTOCNode Title="FailedWithdrawlException Constructor (Double)" Url="html/M-Assessment3.FailedWithdrawlException.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="FailedWithdrawlException Methods" Url="html/Methods.T-Assessment3.FailedWithdrawlException.htm" />
+      <HelpTOCNode Title="FailedWithdrawlException Properties" Url="html/Properties.T-Assessment3.FailedWithdrawlException.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="d044e9b1-6862-48f9-af80-2988d53fc292" Title="InvalidCustomerException Class" Url="html/T-Assessment3.InvalidCustomerException.htm">
+      <HelpTOCNode Title="InvalidCustomerException Members" Url="html/AllMembers.T-Assessment3.InvalidCustomerException.htm" />
+      <HelpTOCNode Title="InvalidCustomerException Constructor " Url="html/M-Assessment3.InvalidCustomerException.-ctor.htm" />
+      <HelpTOCNode Title="InvalidCustomerException Methods" Url="html/Methods.T-Assessment3.InvalidCustomerException.htm" />
+      <HelpTOCNode Title="InvalidCustomerException Properties" Url="html/Properties.T-Assessment3.InvalidCustomerException.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="475d60db-f999-4b2a-875d-572175e70924" Title="InvalidTransferAmountException Class" Url="html/T-Assessment3.InvalidTransferAmountException.htm">
+      <HelpTOCNode Title="InvalidTransferAmountException Members" Url="html/AllMembers.T-Assessment3.InvalidTransferAmountException.htm" />
+      <HelpTOCNode Title="InvalidTransferAmountException Constructor " Url="html/M-Assessment3.InvalidTransferAmountException.-ctor.htm" />
+      <HelpTOCNode Title="InvalidTransferAmountException Methods" Url="html/Methods.T-Assessment3.InvalidTransferAmountException.htm" />
+      <HelpTOCNode Title="InvalidTransferAmountException Properties" Url="html/Properties.T-Assessment3.InvalidTransferAmountException.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="73e9df53-7570-4df0-8fa0-32f92387d921" Title="Investment Class" Url="html/T-Assessment3.Investment.htm">
+      <HelpTOCNode Title="Investment Members" Url="html/AllMembers.T-Assessment3.Investment.htm" />
+      <HelpTOCNode Title="Investment Constructor " Url="html/M-Assessment3.Investment.-ctor.htm" />
+      <HelpTOCNode Id="9a52f4d8-c457-40d4-bc08-a9d2c5690fd0" Title="Investment Methods" Url="html/Methods.T-Assessment3.Investment.htm">
+        <HelpTOCNode Title="ApplyFailFee Method " Url="html/M-Assessment3.Investment.ApplyFailFee.htm" />
+        <HelpTOCNode Title="GetFailFee Method " Url="html/M-Assessment3.Investment.GetFailFee.htm" />
+        <HelpTOCNode Title="GetInterestRate Method " Url="html/M-Assessment3.Investment.GetInterestRate.htm" />
+        <HelpTOCNode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Investment.GetOverdraftLimit.htm" />
+        <HelpTOCNode Title="GetRequiredBalance Method " Url="html/M-Assessment3.Investment.GetRequiredBalance.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Investment Properties" Url="html/Properties.T-Assessment3.Investment.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="c119021e-bf47-4e79-a95a-00f267bb7e8d" Title="ManageAccountsForm Class" Url="html/T-Assessment3.ManageAccountsForm.htm">
+      <HelpTOCNode Title="ManageAccountsForm Members" Url="html/AllMembers.T-Assessment3.ManageAccountsForm.htm" />
+      <HelpTOCNode Title="ManageAccountsForm Constructor " Url="html/M-Assessment3.ManageAccountsForm.-ctor.htm" />
+      <HelpTOCNode Id="a1fff83c-3e53-463a-99b8-59456b4aedd4" Title="ManageAccountsForm Methods" Url="html/Methods.T-Assessment3.ManageAccountsForm.htm">
+        <HelpTOCNode Title="OpenAccountForm Method " Url="html/M-Assessment3.ManageAccountsForm.OpenAccountForm.htm" />
+        <HelpTOCNode Title="RefreshAccountList Method " Url="html/M-Assessment3.ManageAccountsForm.RefreshAccountList.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ManageAccountsForm Properties" Url="html/Properties.T-Assessment3.ManageAccountsForm.htm" />
+      <HelpTOCNode Title="ManageAccountsForm Events" Url="html/Events.T-Assessment3.ManageAccountsForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b87759e3-09d6-4686-b4af-81295f87f1a2" Title="Omni Class" Url="html/T-Assessment3.Omni.htm">
+      <HelpTOCNode Title="Omni Members" Url="html/AllMembers.T-Assessment3.Omni.htm" />
+      <HelpTOCNode Title="Omni Constructor " Url="html/M-Assessment3.Omni.-ctor.htm" />
+      <HelpTOCNode Id="e457fc43-48d2-4ab2-9968-a0fb8e018a57" Title="Omni Methods" Url="html/Methods.T-Assessment3.Omni.htm">
+        <HelpTOCNode Title="ApplyFailFee Method " Url="html/M-Assessment3.Omni.ApplyFailFee.htm" />
+        <HelpTOCNode Title="CheckSufficentBalance Method " Url="html/M-Assessment3.Omni.CheckSufficentBalance.htm" />
+        <HelpTOCNode Title="GetFailFee Method " Url="html/M-Assessment3.Omni.GetFailFee.htm" />
+        <HelpTOCNode Title="GetInterestRate Method " Url="html/M-Assessment3.Omni.GetInterestRate.htm" />
+        <HelpTOCNode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Omni.GetOverdraftLimit.htm" />
+        <HelpTOCNode Title="M:Assessment3.Omni.getRequiredBalance" Url="" />
+        <HelpTOCNode Title="getRequiredBalance Method " Url="html/M-Assessment3.Omni.GetRequiredBalance.htm" />
+        <HelpTOCNode Title="isSufficentBalance Method " Url="html/M-Assessment3.Omni.isSufficentBalance.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Omni Properties" Url="html/Properties.T-Assessment3.Omni.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="4d81ecbd-1b61-4dbd-90fa-9e6cc8fd8c3f" Title="PopupParentForm Class" Url="html/T-Assessment3.PopupParentForm.htm">
+      <HelpTOCNode Title="PopupParentForm Members" Url="html/AllMembers.T-Assessment3.PopupParentForm.htm" />
+      <HelpTOCNode Title="PopupParentForm Constructor " Url="html/M-Assessment3.PopupParentForm.-ctor.htm" />
+      <HelpTOCNode Id="5a13007b-0719-4c58-b18e-ee4a69ea5632" Title="PopupParentForm Fields" Url="html/Fields.T-Assessment3.PopupParentForm.htm">
+        <HelpTOCNode Title="controller Field" Url="html/F-Assessment3.PopupParentForm.controller.htm" />
+        <HelpTOCNode Title="titleLabel Field" Url="html/F-Assessment3.PopupParentForm.titleLabel.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="PopupParentForm Methods" Url="html/Methods.T-Assessment3.PopupParentForm.htm" />
+      <HelpTOCNode Title="PopupParentForm Properties" Url="html/Properties.T-Assessment3.PopupParentForm.htm" />
+      <HelpTOCNode Title="PopupParentForm Events" Url="html/Events.T-Assessment3.PopupParentForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b8603dab-57e7-4d9d-ab43-d082c17bc4ef" Title="StartForm Class" Url="html/T-Assessment3.StartForm.htm">
+      <HelpTOCNode Title="StartForm Members" Url="html/AllMembers.T-Assessment3.StartForm.htm" />
+      <HelpTOCNode Title="StartForm Constructor " Url="html/M-Assessment3.StartForm.-ctor.htm" />
+      <HelpTOCNode Title="StartForm Methods" Url="html/Methods.T-Assessment3.StartForm.htm" />
+      <HelpTOCNode Title="StartForm Properties" Url="html/Properties.T-Assessment3.StartForm.htm" />
+      <HelpTOCNode Title="StartForm Events" Url="html/Events.T-Assessment3.StartForm.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="d045e04b-eaae-48d6-b7a8-23d0ddfb3da9" Title="Transaction Class" Url="html/T-Assessment3.Transaction.htm">
+      <HelpTOCNode Title="Transaction Members" Url="html/AllMembers.T-Assessment3.Transaction.htm" />
+      <HelpTOCNode Title="Transaction Constructor " Url="html/M-Assessment3.Transaction.-ctor.htm" />
+      <HelpTOCNode Id="603cf869-f4d0-45c5-bc4b-ae1033d5d528" Title="Transaction Methods" Url="html/Methods.T-Assessment3.Transaction.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/M-Assessment3.Transaction.ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c9c2fa7e-3dcd-4ea1-a9f8-30a418aadc1d" Title="TransferForm Class" Url="html/T-Assessment3.TransferForm.htm">
+      <HelpTOCNode Title="TransferForm Members" Url="html/AllMembers.T-Assessment3.TransferForm.htm" />
+      <HelpTOCNode Title="TransferForm Constructor " Url="html/M-Assessment3.TransferForm.-ctor.htm" />
+      <HelpTOCNode Id="f00dde5e-2e20-446b-956c-8a399b858dcf" Title="TransferForm Methods" Url="html/Methods.T-Assessment3.TransferForm.htm">
+        <HelpTOCNode Title="InitializeFields Method " Url="html/M-Assessment3.TransferForm.InitializeFields.htm" />
+        <HelpTOCNode Title="validateMoneyInput Method " Url="html/M-Assessment3.TransferForm.validateMoneyInput.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="TransferForm Properties" Url="html/Properties.T-Assessment3.TransferForm.htm" />
+      <HelpTOCNode Title="TransferForm Events" Url="html/Events.T-Assessment3.TransferForm.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

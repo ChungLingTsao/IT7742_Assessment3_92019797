@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Account class">
+    <HelpKINode Title="Account Class" Url="html/T-Assessment3.Account.htm" />
+    <HelpKINode Title="Account Members" Url="html/AllMembers.T-Assessment3.Account.htm" />
+    <HelpKINode Title="about Account class" Url="html/T-Assessment3.Account.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Account.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.Account.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Account.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.Account.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Account.Account constructor" Url="html/M-Assessment3.Account.-ctor.htm" />
+  <HelpKINode Title="Account.Deposit method" Url="html/M-Assessment3.Account.Deposit.htm" />
+  <HelpKINode Title="Account.getAccountID method" Url="html/M-Assessment3.Account.getAccountID.htm" />
+  <HelpKINode Title="Account.getAccountType method" Url="html/M-Assessment3.Account.getAccountType.htm" />
+  <HelpKINode Title="Account.getBalance method" Url="html/M-Assessment3.Account.getBalance.htm" />
+  <HelpKINode Title="Account.GetFailFee method" Url="html/M-Assessment3.Account.GetFailFee.htm" />
+  <HelpKINode Title="Account.GetInterestRate method" Url="html/M-Assessment3.Account.GetInterestRate.htm" />
+  <HelpKINode Title="Account.GetOverdraftLimit method" Url="html/M-Assessment3.Account.GetOverdraftLimit.htm" />
+  <HelpKINode Title="Account.GetRequiredBalance method" Url="html/M-Assessment3.Account.GetRequiredBalance.htm" />
+  <HelpKINode Title="Account.setBalance method" Url="html/M-Assessment3.Account.setBalance.htm" />
+  <HelpKINode Title="Account.TransactionsList property" Url="html/P-Assessment3.Account.TransactionsList.htm" />
+  <HelpKINode Title="Account.Withdraw method" Url="html/M-Assessment3.Account.Withdraw.htm" />
+  <HelpKINode Title="AccountForm class">
+    <HelpKINode Title="AccountForm Class" Url="html/T-Assessment3.AccountForm.htm" />
+    <HelpKINode Title="AccountForm Members" Url="html/AllMembers.T-Assessment3.AccountForm.htm" />
+    <HelpKINode Title="about AccountForm class" Url="html/T-Assessment3.AccountForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.AccountForm.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload-Assessment3.AccountForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.AccountForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.AccountForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.AccountForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccountForm.AccountForm constructor" Url="html/Overload-Assessment3.AccountForm.-ctor.htm" />
+  <HelpKINode Title="AccountForm.InitialiseFields method" Url="html/M-Assessment3.AccountForm.InitialiseFields.htm" />
+  <HelpKINode Title="AccountForm.validateMoneyInput method" Url="html/M-Assessment3.AccountForm.validateMoneyInput.htm" />
+  <HelpKINode Title="AccountList property" Url="html/P-Assessment3.Customer.AccountList.htm" />
+  <HelpKINode Title="AccountTypes.Everyday field" Url="html/F-Assessment3.Enums.AccountTypes.Everyday.htm" />
+  <HelpKINode Title="AccountTypes.Investment field" Url="html/F-Assessment3.Enums.AccountTypes.Investment.htm" />
+  <HelpKINode Title="AccountTypes.Omni field" Url="html/F-Assessment3.Enums.AccountTypes.Omni.htm" />
+  <HelpKINode Title="ActionTypes.Add_Interest field" Url="html/F-Assessment3.Enums.ActionTypes.Add_Interest.htm" />
+  <HelpKINode Title="ActionTypes.Deposit field" Url="html/F-Assessment3.Enums.ActionTypes.Deposit.htm" />
+  <HelpKINode Title="ActionTypes.Transfer field" Url="html/F-Assessment3.Enums.ActionTypes.Transfer.htm" />
+  <HelpKINode Title="ActionTypes.ViewCurrentBalance field" Url="html/F-Assessment3.Enums.ActionTypes.ViewCurrentBalance.htm" />
+  <HelpKINode Title="ActionTypes.Withdraw field" Url="html/F-Assessment3.Enums.ActionTypes.Withdraw.htm" />
+  <HelpKINode Title="AddAccount method" Url="html/M-Assessment3.Controller.AddAccount.htm" />
+  <HelpKINode Title="AddAccountForm class">
+    <HelpKINode Title="AddAccountForm Class" Url="html/T-Assessment3.AddAccountForm.htm" />
+    <HelpKINode Title="AddAccountForm Members" Url="html/AllMembers.T-Assessment3.AddAccountForm.htm" />
+    <HelpKINode Title="about AddAccountForm class" Url="html/T-Assessment3.AddAccountForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.AddAccountForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.AddAccountForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.AddAccountForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.AddAccountForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.AddAccountForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddAccountForm.AddAccountForm constructor" Url="html/M-Assessment3.AddAccountForm.-ctor.htm" />
+  <HelpKINode Title="AddCustomer method" Url="html/M-Assessment3.Controller.AddCustomer.htm" />
+  <HelpKINode Title="AddCustomerForm class">
+    <HelpKINode Title="AddCustomerForm Class" Url="html/T-Assessment3.AddCustomerForm.htm" />
+    <HelpKINode Title="AddCustomerForm Members" Url="html/AllMembers.T-Assessment3.AddCustomerForm.htm" />
+    <HelpKINode Title="about AddCustomerForm class" Url="html/T-Assessment3.AddCustomerForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.AddCustomerForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.AddCustomerForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.AddCustomerForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.AddCustomerForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.AddCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddCustomerForm.AddCustomerForm constructor" Url="html/M-Assessment3.AddCustomerForm.-ctor.htm" />
+  <HelpKINode Title="AddInterest method" Url="html/M-Assessment3.Controller.AddInterest.htm" />
+  <HelpKINode Title="Address property" Url="html/P-Assessment3.Customer.Address.htm" />
+  <HelpKINode Title="addressTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.addressTextBox.htm" />
+  <HelpKINode Title="Add_Interest enumeration member" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+  <HelpKINode Title="Add_Interest field" Url="html/F-Assessment3.Enums.ActionTypes.Add_Interest.htm" />
+  <HelpKINode Title="ApplyFailFee method">
+    <HelpKINode Title="ApplyFailFee Method " Url="html/M-Assessment3.Omni.ApplyFailFee.htm" />
+    <HelpKINode Title="ApplyFailFee Method " Url="html/M-Assessment3.Investment.ApplyFailFee.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3 namespace" Url="html/N-Assessment3.htm" />
+  <HelpKINode Title="Assessment3.Account class">
+    <HelpKINode Title="Account Class" Url="html/T-Assessment3.Account.htm" />
+    <HelpKINode Title="Account Members" Url="html/AllMembers.T-Assessment3.Account.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.AccountForm class">
+    <HelpKINode Title="AccountForm Class" Url="html/T-Assessment3.AccountForm.htm" />
+    <HelpKINode Title="AccountForm Members" Url="html/AllMembers.T-Assessment3.AccountForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.AddAccountForm class">
+    <HelpKINode Title="AddAccountForm Class" Url="html/T-Assessment3.AddAccountForm.htm" />
+    <HelpKINode Title="AddAccountForm Members" Url="html/AllMembers.T-Assessment3.AddAccountForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.AddCustomerForm class">
+    <HelpKINode Title="AddCustomerForm Class" Url="html/T-Assessment3.AddCustomerForm.htm" />
+    <HelpKINode Title="AddCustomerForm Members" Url="html/AllMembers.T-Assessment3.AddCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.BrandingParentForm class">
+    <HelpKINode Title="BrandingParentForm Class" Url="html/T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="BrandingParentForm Members" Url="html/AllMembers.T-Assessment3.BrandingParentForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.Controller class">
+    <HelpKINode Title="Controller Class" Url="html/T-Assessment3.Controller.htm" />
+    <HelpKINode Title="Controller Members" Url="html/AllMembers.T-Assessment3.Controller.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.CRUDCustomerForm class">
+    <HelpKINode Title="CRUDCustomerForm Class" Url="html/T-Assessment3.CRUDCustomerForm.htm" />
+    <HelpKINode Title="CRUDCustomerForm Members" Url="html/AllMembers.T-Assessment3.CRUDCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.CUDCustomerParentForm class">
+    <HelpKINode Title="CUDCustomerParentForm Class" Url="html/T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="CUDCustomerParentForm Members" Url="html/AllMembers.T-Assessment3.CUDCustomerParentForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.Customer class">
+    <HelpKINode Title="Customer Class" Url="html/T-Assessment3.Customer.htm" />
+    <HelpKINode Title="Customer Members" Url="html/AllMembers.T-Assessment3.Customer.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.DeleteCustomerForm class">
+    <HelpKINode Title="DeleteCustomerForm Class" Url="html/T-Assessment3.DeleteCustomerForm.htm" />
+    <HelpKINode Title="DeleteCustomerForm Members" Url="html/AllMembers.T-Assessment3.DeleteCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.EditCustomerForm class">
+    <HelpKINode Title="EditCustomerForm Class" Url="html/T-Assessment3.EditCustomerForm.htm" />
+    <HelpKINode Title="EditCustomerForm Members" Url="html/AllMembers.T-Assessment3.EditCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.Enums class">
+    <HelpKINode Title="Enums Class" Url="html/T-Assessment3.Enums.htm" />
+    <HelpKINode Title="Enums Members" Url="html/AllMembers.T-Assessment3.Enums.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.Enums.AccountTypes enumeration" Url="html/T-Assessment3.Enums.AccountTypes.htm" />
+  <HelpKINode Title="Assessment3.Enums.ActionTypes enumeration" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+  <HelpKINode Title="Assessment3.Everyday class">
+    <HelpKINode Title="Everyday Class" Url="html/T-Assessment3.Everyday.htm" />
+    <HelpKINode Title="Everyday Members" Url="html/AllMembers.T-Assessment3.Everyday.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.FailedWithdrawlException class">
+    <HelpKINode Title="FailedWithdrawlException Class" Url="html/T-Assessment3.FailedWithdrawlException.htm" />
+    <HelpKINode Title="FailedWithdrawlException Members" Url="html/AllMembers.T-Assessment3.FailedWithdrawlException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.InvalidCustomerException class">
+    <HelpKINode Title="InvalidCustomerException Class" Url="html/T-Assessment3.InvalidCustomerException.htm" />
+    <HelpKINode Title="InvalidCustomerException Members" Url="html/AllMembers.T-Assessment3.InvalidCustomerException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.InvalidTransferAmountException class">
+    <HelpKINode Title="InvalidTransferAmountException Class" Url="html/T-Assessment3.InvalidTransferAmountException.htm" />
+    <HelpKINode Title="InvalidTransferAmountException Members" Url="html/AllMembers.T-Assessment3.InvalidTransferAmountException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.Investment class">
+    <HelpKINode Title="Investment Class" Url="html/T-Assessment3.Investment.htm" />
+    <HelpKINode Title="Investment Members" Url="html/AllMembers.T-Assessment3.Investment.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.ManageAccountsForm class">
+    <HelpKINode Title="ManageAccountsForm Class" Url="html/T-Assessment3.ManageAccountsForm.htm" />
+    <HelpKINode Title="ManageAccountsForm Members" Url="html/AllMembers.T-Assessment3.ManageAccountsForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.Omni class">
+    <HelpKINode Title="Omni Class" Url="html/T-Assessment3.Omni.htm" />
+    <HelpKINode Title="Omni Members" Url="html/AllMembers.T-Assessment3.Omni.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.PopupParentForm class">
+    <HelpKINode Title="PopupParentForm Class" Url="html/T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="PopupParentForm Members" Url="html/AllMembers.T-Assessment3.PopupParentForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.StartForm class">
+    <HelpKINode Title="StartForm Class" Url="html/T-Assessment3.StartForm.htm" />
+    <HelpKINode Title="StartForm Members" Url="html/AllMembers.T-Assessment3.StartForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.Transaction class">
+    <HelpKINode Title="Transaction Class" Url="html/T-Assessment3.Transaction.htm" />
+    <HelpKINode Title="Transaction Members" Url="html/AllMembers.T-Assessment3.Transaction.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Assessment3.TransferForm class">
+    <HelpKINode Title="TransferForm Class" Url="html/T-Assessment3.TransferForm.htm" />
+    <HelpKINode Title="TransferForm Members" Url="html/AllMembers.T-Assessment3.TransferForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BrandingParentForm class">
+    <HelpKINode Title="BrandingParentForm Class" Url="html/T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="BrandingParentForm Members" Url="html/AllMembers.T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="about BrandingParentForm class" Url="html/T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.BrandingParentForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.BrandingParentForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.BrandingParentForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BrandingParentForm.BrandingParentForm constructor" Url="html/M-Assessment3.BrandingParentForm.-ctor.htm" />
+  <HelpKINode Title="BrandingParentForm.controller field" Url="html/F-Assessment3.BrandingParentForm.controller.htm" />
+  <HelpKINode Title="BrandingParentForm.titleLabel field" Url="html/F-Assessment3.BrandingParentForm.titleLabel.htm" />
+  <HelpKINode Title="button3 field" Url="html/F-Assessment3.CUDCustomerParentForm.button3.htm" />
+  <HelpKINode Title="CheckSufficentBalance method" Url="html/M-Assessment3.Omni.CheckSufficentBalance.htm" />
+  <HelpKINode Title="City property" Url="html/P-Assessment3.Customer.City.htm" />
+  <HelpKINode Title="cityTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.cityTextBox.htm" />
+  <HelpKINode Title="Controller class">
+    <HelpKINode Title="Controller Class" Url="html/T-Assessment3.Controller.htm" />
+    <HelpKINode Title="Controller Members" Url="html/AllMembers.T-Assessment3.Controller.htm" />
+    <HelpKINode Title="about Controller class" Url="html/T-Assessment3.Controller.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Controller.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Controller.htm" />
+  </HelpKINode>
+  <HelpKINode Title="controller field">
+    <HelpKINode Title="controller Field" Url="html/F-Assessment3.BrandingParentForm.controller.htm" />
+    <HelpKINode Title="controller Field" Url="html/F-Assessment3.PopupParentForm.controller.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Controller.AddAccount method" Url="html/M-Assessment3.Controller.AddAccount.htm" />
+  <HelpKINode Title="Controller.AddCustomer method" Url="html/M-Assessment3.Controller.AddCustomer.htm" />
+  <HelpKINode Title="Controller.AddInterest method" Url="html/M-Assessment3.Controller.AddInterest.htm" />
+  <HelpKINode Title="Controller.DeleteCustomer method" Url="html/M-Assessment3.Controller.DeleteCustomer.htm" />
+  <HelpKINode Title="Controller.Deposit method" Url="html/M-Assessment3.Controller.Deposit.htm" />
+  <HelpKINode Title="Controller.EditCustomer method" Url="html/M-Assessment3.Controller.EditCustomer.htm" />
+  <HelpKINode Title="Controller.RecordTransaction method" Url="html/M-Assessment3.Controller.RecordTransaction.htm" />
+  <HelpKINode Title="Controller.Transfer method" Url="html/M-Assessment3.Controller.Transfer.htm" />
+  <HelpKINode Title="Controller.Withdraw method" Url="html/M-Assessment3.Controller.Withdraw.htm" />
+  <HelpKINode Title="CRUDCustomerForm class">
+    <HelpKINode Title="CRUDCustomerForm Class" Url="html/T-Assessment3.CRUDCustomerForm.htm" />
+    <HelpKINode Title="CRUDCustomerForm Members" Url="html/AllMembers.T-Assessment3.CRUDCustomerForm.htm" />
+    <HelpKINode Title="about CRUDCustomerForm class" Url="html/T-Assessment3.CRUDCustomerForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.CRUDCustomerForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.CRUDCustomerForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.CRUDCustomerForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.CRUDCustomerForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.CRUDCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CRUDCustomerForm.CRUDCustomerForm constructor" Url="html/M-Assessment3.CRUDCustomerForm.-ctor.htm" />
+  <HelpKINode Title="CUDCustomerParentForm class">
+    <HelpKINode Title="CUDCustomerParentForm Class" Url="html/T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="CUDCustomerParentForm Members" Url="html/AllMembers.T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="about CUDCustomerParentForm class" Url="html/T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.CUDCustomerParentForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.CUDCustomerParentForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.CUDCustomerParentForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CUDCustomerParentForm.addressTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.addressTextBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.button3 field" Url="html/F-Assessment3.CUDCustomerParentForm.button3.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.cityTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.cityTextBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.CUDCustomerParentForm constructor" Url="html/M-Assessment3.CUDCustomerParentForm.-ctor.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.emailTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.emailTextBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.idTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.idTextBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.nameTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.nameTextBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.phoneTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.phoneTextBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.staffCheckBox field" Url="html/F-Assessment3.CUDCustomerParentForm.staffCheckBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.suburbTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.suburbTextBox.htm" />
+  <HelpKINode Title="CUDCustomerParentForm.zipTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.zipTextBox.htm" />
+  <HelpKINode Title="Customer class">
+    <HelpKINode Title="Customer Class" Url="html/T-Assessment3.Customer.htm" />
+    <HelpKINode Title="Customer Members" Url="html/AllMembers.T-Assessment3.Customer.htm" />
+    <HelpKINode Title="about Customer class" Url="html/T-Assessment3.Customer.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Customer.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.Customer.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Customer.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.Customer.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Customer.AccountList property" Url="html/P-Assessment3.Customer.AccountList.htm" />
+  <HelpKINode Title="Customer.Address property" Url="html/P-Assessment3.Customer.Address.htm" />
+  <HelpKINode Title="Customer.City property" Url="html/P-Assessment3.Customer.City.htm" />
+  <HelpKINode Title="Customer.Customer constructor" Url="html/M-Assessment3.Customer.-ctor.htm" />
+  <HelpKINode Title="Customer.CustomerNumber property" Url="html/P-Assessment3.Customer.CustomerNumber.htm" />
+  <HelpKINode Title="Customer.Email property" Url="html/P-Assessment3.Customer.Email.htm" />
+  <HelpKINode Title="Customer.IsStaff property" Url="html/P-Assessment3.Customer.IsStaff.htm" />
+  <HelpKINode Title="Customer.Name property" Url="html/P-Assessment3.Customer.Name.htm" />
+  <HelpKINode Title="Customer.Phone property" Url="html/P-Assessment3.Customer.Phone.htm" />
+  <HelpKINode Title="Customer.Suburb property" Url="html/P-Assessment3.Customer.Suburb.htm" />
+  <HelpKINode Title="Customer.ToString method" Url="html/M-Assessment3.Customer.ToString.htm" />
+  <HelpKINode Title="Customer.Zip property" Url="html/P-Assessment3.Customer.Zip.htm" />
+  <HelpKINode Title="CustomerNumber property" Url="html/P-Assessment3.Customer.CustomerNumber.htm" />
+  <HelpKINode Title="DeleteCustomer method" Url="html/M-Assessment3.Controller.DeleteCustomer.htm" />
+  <HelpKINode Title="DeleteCustomerForm class">
+    <HelpKINode Title="DeleteCustomerForm Class" Url="html/T-Assessment3.DeleteCustomerForm.htm" />
+    <HelpKINode Title="DeleteCustomerForm Members" Url="html/AllMembers.T-Assessment3.DeleteCustomerForm.htm" />
+    <HelpKINode Title="about DeleteCustomerForm class" Url="html/T-Assessment3.DeleteCustomerForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.DeleteCustomerForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.DeleteCustomerForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.DeleteCustomerForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.DeleteCustomerForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.DeleteCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DeleteCustomerForm.DeleteCustomerForm constructor" Url="html/M-Assessment3.DeleteCustomerForm.-ctor.htm" />
+  <HelpKINode Title="Deposit enumeration member" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+  <HelpKINode Title="Deposit field" Url="html/F-Assessment3.Enums.ActionTypes.Deposit.htm" />
+  <HelpKINode Title="Deposit method">
+    <HelpKINode Title="Deposit Method " Url="html/M-Assessment3.Controller.Deposit.htm" />
+    <HelpKINode Title="Deposit Method " Url="html/M-Assessment3.Account.Deposit.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EditCustomer method" Url="html/M-Assessment3.Controller.EditCustomer.htm" />
+  <HelpKINode Title="EditCustomerForm class">
+    <HelpKINode Title="EditCustomerForm Class" Url="html/T-Assessment3.EditCustomerForm.htm" />
+    <HelpKINode Title="EditCustomerForm Members" Url="html/AllMembers.T-Assessment3.EditCustomerForm.htm" />
+    <HelpKINode Title="about EditCustomerForm class" Url="html/T-Assessment3.EditCustomerForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.EditCustomerForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.EditCustomerForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.EditCustomerForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.EditCustomerForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.EditCustomerForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EditCustomerForm.EditCustomerForm constructor" Url="html/M-Assessment3.EditCustomerForm.-ctor.htm" />
+  <HelpKINode Title="Email property" Url="html/P-Assessment3.Customer.Email.htm" />
+  <HelpKINode Title="emailTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.emailTextBox.htm" />
+  <HelpKINode Title="Enums class">
+    <HelpKINode Title="Enums Class" Url="html/T-Assessment3.Enums.htm" />
+    <HelpKINode Title="Enums Members" Url="html/AllMembers.T-Assessment3.Enums.htm" />
+    <HelpKINode Title="about Enums class" Url="html/T-Assessment3.Enums.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Enums.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Enums.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Enums.AccountTypes enumeration" Url="html/T-Assessment3.Enums.AccountTypes.htm" />
+  <HelpKINode Title="Enums.ActionTypes enumeration" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+  <HelpKINode Title="Everyday class">
+    <HelpKINode Title="Everyday Class" Url="html/T-Assessment3.Everyday.htm" />
+    <HelpKINode Title="Everyday Members" Url="html/AllMembers.T-Assessment3.Everyday.htm" />
+    <HelpKINode Title="about Everyday class" Url="html/T-Assessment3.Everyday.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Everyday.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.Everyday.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Everyday.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.Everyday.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Everyday enumeration member" Url="html/T-Assessment3.Enums.AccountTypes.htm" />
+  <HelpKINode Title="Everyday field" Url="html/F-Assessment3.Enums.AccountTypes.Everyday.htm" />
+  <HelpKINode Title="Everyday.Everyday constructor" Url="html/M-Assessment3.Everyday.-ctor.htm" />
+  <HelpKINode Title="Everyday.GetFailFee method" Url="html/M-Assessment3.Everyday.GetFailFee.htm" />
+  <HelpKINode Title="Everyday.GetInterestRate method" Url="html/M-Assessment3.Everyday.GetInterestRate.htm" />
+  <HelpKINode Title="Everyday.GetOverdraftLimit method" Url="html/M-Assessment3.Everyday.GetOverdraftLimit.htm" />
+  <HelpKINode Title="Everyday.GetRequiredBalance method" Url="html/M-Assessment3.Everyday.GetRequiredBalance.htm" />
+  <HelpKINode Title="FailedWithdrawlException class">
+    <HelpKINode Title="FailedWithdrawlException Class" Url="html/T-Assessment3.FailedWithdrawlException.htm" />
+    <HelpKINode Title="FailedWithdrawlException Members" Url="html/AllMembers.T-Assessment3.FailedWithdrawlException.htm" />
+    <HelpKINode Title="about FailedWithdrawlException class" Url="html/T-Assessment3.FailedWithdrawlException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.FailedWithdrawlException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload-Assessment3.FailedWithdrawlException.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.FailedWithdrawlException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.FailedWithdrawlException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FailedWithdrawlException.FailedWithdrawlException constructor" Url="html/Overload-Assessment3.FailedWithdrawlException.-ctor.htm" />
+  <HelpKINode Title="getAccountID method" Url="html/M-Assessment3.Account.getAccountID.htm" />
+  <HelpKINode Title="getAccountType method" Url="html/M-Assessment3.Account.getAccountType.htm" />
+  <HelpKINode Title="getBalance method" Url="html/M-Assessment3.Account.getBalance.htm" />
+  <HelpKINode Title="GetFailFee method">
+    <HelpKINode Title="GetFailFee Method " Url="html/M-Assessment3.Account.GetFailFee.htm" />
+    <HelpKINode Title="GetFailFee Method " Url="html/M-Assessment3.Everyday.GetFailFee.htm" />
+    <HelpKINode Title="GetFailFee Method " Url="html/M-Assessment3.Omni.GetFailFee.htm" />
+    <HelpKINode Title="GetFailFee Method " Url="html/M-Assessment3.Investment.GetFailFee.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetInterestRate method">
+    <HelpKINode Title="GetInterestRate Method " Url="html/M-Assessment3.Everyday.GetInterestRate.htm" />
+    <HelpKINode Title="GetInterestRate Method " Url="html/M-Assessment3.Account.GetInterestRate.htm" />
+    <HelpKINode Title="GetInterestRate Method " Url="html/M-Assessment3.Omni.GetInterestRate.htm" />
+    <HelpKINode Title="GetInterestRate Method " Url="html/M-Assessment3.Investment.GetInterestRate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetOverdraftLimit method">
+    <HelpKINode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Omni.GetOverdraftLimit.htm" />
+    <HelpKINode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Everyday.GetOverdraftLimit.htm" />
+    <HelpKINode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Account.GetOverdraftLimit.htm" />
+    <HelpKINode Title="GetOverdraftLimit Method " Url="html/M-Assessment3.Investment.GetOverdraftLimit.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetRequiredBalance method">
+    <HelpKINode Title="GetRequiredBalance Method " Url="html/M-Assessment3.Account.GetRequiredBalance.htm" />
+    <HelpKINode Title="GetRequiredBalance Method " Url="html/M-Assessment3.Investment.GetRequiredBalance.htm" />
+    <HelpKINode Title="GetRequiredBalance Method " Url="html/M-Assessment3.Everyday.GetRequiredBalance.htm" />
+  </HelpKINode>
+  <HelpKINode Title="getRequiredBalance method" Url="html/M-Assessment3.Omni.GetRequiredBalance.htm" />
+  <HelpKINode Title="idTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.idTextBox.htm" />
+  <HelpKINode Title="InitialiseFields method" Url="html/M-Assessment3.AccountForm.InitialiseFields.htm" />
+  <HelpKINode Title="InitializeFields method" Url="html/M-Assessment3.TransferForm.InitializeFields.htm" />
+  <HelpKINode Title="InvalidCustomerException class">
+    <HelpKINode Title="InvalidCustomerException Class" Url="html/T-Assessment3.InvalidCustomerException.htm" />
+    <HelpKINode Title="InvalidCustomerException Members" Url="html/AllMembers.T-Assessment3.InvalidCustomerException.htm" />
+    <HelpKINode Title="about InvalidCustomerException class" Url="html/T-Assessment3.InvalidCustomerException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.InvalidCustomerException.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.InvalidCustomerException.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.InvalidCustomerException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.InvalidCustomerException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidCustomerException.InvalidCustomerException constructor" Url="html/M-Assessment3.InvalidCustomerException.-ctor.htm" />
+  <HelpKINode Title="InvalidTransferAmountException class">
+    <HelpKINode Title="InvalidTransferAmountException Class" Url="html/T-Assessment3.InvalidTransferAmountException.htm" />
+    <HelpKINode Title="InvalidTransferAmountException Members" Url="html/AllMembers.T-Assessment3.InvalidTransferAmountException.htm" />
+    <HelpKINode Title="about InvalidTransferAmountException class" Url="html/T-Assessment3.InvalidTransferAmountException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.InvalidTransferAmountException.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.InvalidTransferAmountException.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.InvalidTransferAmountException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.InvalidTransferAmountException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidTransferAmountException.InvalidTransferAmountException constructor" Url="html/M-Assessment3.InvalidTransferAmountException.-ctor.htm" />
+  <HelpKINode Title="Investment class">
+    <HelpKINode Title="Investment Class" Url="html/T-Assessment3.Investment.htm" />
+    <HelpKINode Title="Investment Members" Url="html/AllMembers.T-Assessment3.Investment.htm" />
+    <HelpKINode Title="about Investment class" Url="html/T-Assessment3.Investment.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Investment.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.Investment.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Investment.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.Investment.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Investment enumeration member" Url="html/T-Assessment3.Enums.AccountTypes.htm" />
+  <HelpKINode Title="Investment field" Url="html/F-Assessment3.Enums.AccountTypes.Investment.htm" />
+  <HelpKINode Title="Investment.ApplyFailFee method" Url="html/M-Assessment3.Investment.ApplyFailFee.htm" />
+  <HelpKINode Title="Investment.GetFailFee method" Url="html/M-Assessment3.Investment.GetFailFee.htm" />
+  <HelpKINode Title="Investment.GetInterestRate method" Url="html/M-Assessment3.Investment.GetInterestRate.htm" />
+  <HelpKINode Title="Investment.GetOverdraftLimit method" Url="html/M-Assessment3.Investment.GetOverdraftLimit.htm" />
+  <HelpKINode Title="Investment.GetRequiredBalance method" Url="html/M-Assessment3.Investment.GetRequiredBalance.htm" />
+  <HelpKINode Title="Investment.Investment constructor" Url="html/M-Assessment3.Investment.-ctor.htm" />
+  <HelpKINode Title="IsStaff property" Url="html/P-Assessment3.Customer.IsStaff.htm" />
+  <HelpKINode Title="isSufficentBalance method" Url="html/M-Assessment3.Omni.isSufficentBalance.htm" />
+  <HelpKINode Title="ManageAccountsForm class">
+    <HelpKINode Title="ManageAccountsForm Class" Url="html/T-Assessment3.ManageAccountsForm.htm" />
+    <HelpKINode Title="ManageAccountsForm Members" Url="html/AllMembers.T-Assessment3.ManageAccountsForm.htm" />
+    <HelpKINode Title="about ManageAccountsForm class" Url="html/T-Assessment3.ManageAccountsForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.ManageAccountsForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.ManageAccountsForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.ManageAccountsForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.ManageAccountsForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.ManageAccountsForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ManageAccountsForm.ManageAccountsForm constructor" Url="html/M-Assessment3.ManageAccountsForm.-ctor.htm" />
+  <HelpKINode Title="ManageAccountsForm.OpenAccountForm method" Url="html/M-Assessment3.ManageAccountsForm.OpenAccountForm.htm" />
+  <HelpKINode Title="ManageAccountsForm.RefreshAccountList method" Url="html/M-Assessment3.ManageAccountsForm.RefreshAccountList.htm" />
+  <HelpKINode Title="Name property" Url="html/P-Assessment3.Customer.Name.htm" />
+  <HelpKINode Title="nameTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.nameTextBox.htm" />
+  <HelpKINode Title="Omni class">
+    <HelpKINode Title="Omni Class" Url="html/T-Assessment3.Omni.htm" />
+    <HelpKINode Title="Omni Members" Url="html/AllMembers.T-Assessment3.Omni.htm" />
+    <HelpKINode Title="about Omni class" Url="html/T-Assessment3.Omni.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Omni.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.Omni.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Omni.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.Omni.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Omni enumeration member" Url="html/T-Assessment3.Enums.AccountTypes.htm" />
+  <HelpKINode Title="Omni field" Url="html/F-Assessment3.Enums.AccountTypes.Omni.htm" />
+  <HelpKINode Title="Omni.ApplyFailFee method" Url="html/M-Assessment3.Omni.ApplyFailFee.htm" />
+  <HelpKINode Title="Omni.CheckSufficentBalance method" Url="html/M-Assessment3.Omni.CheckSufficentBalance.htm" />
+  <HelpKINode Title="Omni.GetFailFee method" Url="html/M-Assessment3.Omni.GetFailFee.htm" />
+  <HelpKINode Title="Omni.GetInterestRate method" Url="html/M-Assessment3.Omni.GetInterestRate.htm" />
+  <HelpKINode Title="Omni.GetOverdraftLimit method" Url="html/M-Assessment3.Omni.GetOverdraftLimit.htm" />
+  <HelpKINode Title="Omni.getRequiredBalance method" Url="html/M-Assessment3.Omni.GetRequiredBalance.htm" />
+  <HelpKINode Title="Omni.isSufficentBalance method" Url="html/M-Assessment3.Omni.isSufficentBalance.htm" />
+  <HelpKINode Title="Omni.Omni constructor" Url="html/M-Assessment3.Omni.-ctor.htm" />
+  <HelpKINode Title="OpenAccountForm method" Url="html/M-Assessment3.ManageAccountsForm.OpenAccountForm.htm" />
+  <HelpKINode Title="Phone property" Url="html/P-Assessment3.Customer.Phone.htm" />
+  <HelpKINode Title="phoneTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.phoneTextBox.htm" />
+  <HelpKINode Title="PopupParentForm class">
+    <HelpKINode Title="PopupParentForm Class" Url="html/T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="PopupParentForm Members" Url="html/AllMembers.T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="about PopupParentForm class" Url="html/T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.PopupParentForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.PopupParentForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.PopupParentForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PopupParentForm.controller field" Url="html/F-Assessment3.PopupParentForm.controller.htm" />
+  <HelpKINode Title="PopupParentForm.PopupParentForm constructor" Url="html/M-Assessment3.PopupParentForm.-ctor.htm" />
+  <HelpKINode Title="PopupParentForm.titleLabel field" Url="html/F-Assessment3.PopupParentForm.titleLabel.htm" />
+  <HelpKINode Title="RecordTransaction method" Url="html/M-Assessment3.Controller.RecordTransaction.htm" />
+  <HelpKINode Title="RefreshAccountList method" Url="html/M-Assessment3.ManageAccountsForm.RefreshAccountList.htm" />
+  <HelpKINode Title="setBalance method" Url="html/M-Assessment3.Account.setBalance.htm" />
+  <HelpKINode Title="staffCheckBox field" Url="html/F-Assessment3.CUDCustomerParentForm.staffCheckBox.htm" />
+  <HelpKINode Title="StartForm class">
+    <HelpKINode Title="StartForm Class" Url="html/T-Assessment3.StartForm.htm" />
+    <HelpKINode Title="StartForm Members" Url="html/AllMembers.T-Assessment3.StartForm.htm" />
+    <HelpKINode Title="about StartForm class" Url="html/T-Assessment3.StartForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.StartForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.StartForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.StartForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.StartForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.StartForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StartForm.StartForm constructor" Url="html/M-Assessment3.StartForm.-ctor.htm" />
+  <HelpKINode Title="Suburb property" Url="html/P-Assessment3.Customer.Suburb.htm" />
+  <HelpKINode Title="suburbTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.suburbTextBox.htm" />
+  <HelpKINode Title="titleLabel field">
+    <HelpKINode Title="titleLabel Field" Url="html/F-Assessment3.PopupParentForm.titleLabel.htm" />
+    <HelpKINode Title="titleLabel Field" Url="html/F-Assessment3.BrandingParentForm.titleLabel.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ToString method">
+    <HelpKINode Title="ToString Method " Url="html/M-Assessment3.Customer.ToString.htm" />
+    <HelpKINode Title="ToString Method " Url="html/M-Assessment3.Transaction.ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Transaction class">
+    <HelpKINode Title="Transaction Class" Url="html/T-Assessment3.Transaction.htm" />
+    <HelpKINode Title="Transaction Members" Url="html/AllMembers.T-Assessment3.Transaction.htm" />
+    <HelpKINode Title="about Transaction class" Url="html/T-Assessment3.Transaction.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.Transaction.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.Transaction.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.Transaction.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Transaction.ToString method" Url="html/M-Assessment3.Transaction.ToString.htm" />
+  <HelpKINode Title="Transaction.Transaction constructor" Url="html/M-Assessment3.Transaction.-ctor.htm" />
+  <HelpKINode Title="TransactionsList property" Url="html/P-Assessment3.Account.TransactionsList.htm" />
+  <HelpKINode Title="Transfer enumeration member" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+  <HelpKINode Title="Transfer field" Url="html/F-Assessment3.Enums.ActionTypes.Transfer.htm" />
+  <HelpKINode Title="Transfer method" Url="html/M-Assessment3.Controller.Transfer.htm" />
+  <HelpKINode Title="TransferForm class">
+    <HelpKINode Title="TransferForm Class" Url="html/T-Assessment3.TransferForm.htm" />
+    <HelpKINode Title="TransferForm Members" Url="html/AllMembers.T-Assessment3.TransferForm.htm" />
+    <HelpKINode Title="about TransferForm class" Url="html/T-Assessment3.TransferForm.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Assessment3.TransferForm.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Assessment3.TransferForm.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Assessment3.TransferForm.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Assessment3.TransferForm.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Assessment3.TransferForm.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TransferForm.InitializeFields method" Url="html/M-Assessment3.TransferForm.InitializeFields.htm" />
+  <HelpKINode Title="TransferForm.TransferForm constructor" Url="html/M-Assessment3.TransferForm.-ctor.htm" />
+  <HelpKINode Title="TransferForm.validateMoneyInput method" Url="html/M-Assessment3.TransferForm.validateMoneyInput.htm" />
+  <HelpKINode Title="validateMoneyInput method">
+    <HelpKINode Title="validateMoneyInput Method " Url="html/M-Assessment3.AccountForm.validateMoneyInput.htm" />
+    <HelpKINode Title="validateMoneyInput Method " Url="html/M-Assessment3.TransferForm.validateMoneyInput.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewCurrentBalance enumeration member" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+  <HelpKINode Title="ViewCurrentBalance field" Url="html/F-Assessment3.Enums.ActionTypes.ViewCurrentBalance.htm" />
+  <HelpKINode Title="Withdraw enumeration member" Url="html/T-Assessment3.Enums.ActionTypes.htm" />
+  <HelpKINode Title="Withdraw field" Url="html/F-Assessment3.Enums.ActionTypes.Withdraw.htm" />
+  <HelpKINode Title="Withdraw method">
+    <HelpKINode Title="Withdraw Method " Url="html/M-Assessment3.Controller.Withdraw.htm" />
+    <HelpKINode Title="Withdraw Method " Url="html/M-Assessment3.Account.Withdraw.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Zip property" Url="html/P-Assessment3.Customer.Zip.htm" />
+  <HelpKINode Title="zipTextBox field" Url="html/F-Assessment3.CUDCustomerParentForm.zipTextBox.htm" />
+</HelpKI>
